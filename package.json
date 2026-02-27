@@ -1,0 +1,35 @@
+{
+  "name": "ai-engineering-lab-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "AI Engineering Lab — support for government departments adopting AI coding tools",
+  "scripts": {
+    "postinstall": "node patch-sass.js",
+    "prepare": "husky install",
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "dead-links": "node dead-links-check.js",
+    "format": "prettier --write \"**/*.{js,md,json,css,scss,html}\"",
+    "format:check": "prettier --check \"**/*.{js,md,json,css,scss,html}\"",
+    "lint": "eslint . --ext .js --max-warnings=0",
+    "audit": "npm audit --audit-level=moderate",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{md,json,css,scss,html}": "prettier --write"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@x-govuk/govuk-eleventy-plugin": "^7.0.0",
+    "eslint": "^10.0.0",
+    "husky": "^9.0.0",
+    "jest": "^30.2.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^2.8.0"
+  }
+}

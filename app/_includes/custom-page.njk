@@ -1,0 +1,37 @@
+{% extends "layouts/base.njk" %}
+
+{% block header %}
+  <header class="govuk-header govuk-header--full-width-border" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+      <div class="govuk-header__logo">
+        <a href="/" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype-text">AI Engineering Lab</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  {{ appServiceNavigation(options.serviceNavigation) if options.serviceNavigation }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../_includes/custom-sub-navigation.njk" %}
+  {% if page.url != '/' %}
+    {% include "../_includes/back-link.njk" %}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {{ appDocumentHeader({
+        caption: caption,
+        title: title,
+        description: description
+      }) }}
+
+      {{ appProseScope(content) if content }}
+
+      {% include "layouts/shared/related.njk" %}
+    </div>
+  </div>
+{% endblock %}

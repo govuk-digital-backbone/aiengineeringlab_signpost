@@ -1,0 +1,212 @@
+<style>
+  .govuk-service-navigation__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .govuk-service-navigation__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-nav-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-nav-dropdown__button {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #1d70b8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px 15px 15px 15px;
+    margin: 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+  }
+
+  .app-nav-dropdown__button::-webkit-details-marker {
+    display: none;
+  }
+
+  @media (min-width: 40.0625em) {
+    .app-nav-dropdown__button {
+      font-size: 19px;
+      line-height: 1.3157894737;
+    }
+  }
+
+  .app-nav-dropdown__button:hover {
+    color: #003078;
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, .1875rem, .12em);
+    text-underline-offset: .1em;
+  }
+
+  .app-nav-dropdown__button:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .app-nav-dropdown__arrow {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  .app-nav-dropdown[open] .app-nav-dropdown__arrow {
+    transform: rotate(180deg);
+  }
+
+  .app-nav-dropdown__content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    min-width: 260px;
+    padding: 10px 0;
+    background: #ffffff;
+    border: 1px solid #b1b4b6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    margin: 0;
+  }
+
+  .app-nav-dropdown__content li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-nav-dropdown__content a {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #1d70b8;
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+  }
+
+  .app-nav-dropdown__content a:hover {
+    background-color: #f3f2f1;
+    color: #003078;
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, .1875rem, .12em);
+    text-underline-offset: .1em;
+  }
+
+  .app-nav-dropdown__content a:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none;
+  }
+
+  @media (max-width: 40.0625em) {
+    .app-nav-dropdown__content {
+      position: relative;
+      box-shadow: none;
+      border: none;
+      border-left: 4px solid #1d70b8;
+      min-width: auto;
+      padding: 0;
+      margin-left: 10px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var navList = document.querySelector('.govuk-service-navigation__list');
+    if (!navList) return;
+
+    var dropdownData = {
+      'Explore': [
+        { text: 'What AI tools can do', href: '/explore/what-ai-tools-can-do/' },
+        { text: 'How to adopt AI tools', href: '/explore/how-to-adopt-ai-tools/' },
+        { text: 'Getting started with your licenses', href: '/explore/getting-started/' },
+        { text: 'Change management resources', href: '/explore/change-management/' },
+        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab" },
+        { text: 'Community events', href: '/explore/community-events/' },
+        { text: 'Contact us', href: '/explore/contact-us/' }
+      ],
+      'Roles': [
+        { text: 'Senior leaders and decision-makers', href: '/roles/senior-leaders/' },
+        { text: 'Champions', href: '/roles/champions/' },
+        { text: 'Software engineers', href: '/roles/software-engineers/' },
+        { text: 'Delivery teams', href: '/roles/delivery-teams/' }
+      ]
+    };
+
+    var navItems = navList.querySelectorAll('.govuk-service-navigation__item');
+    navItems.forEach(function(item) {
+      var link = item.querySelector('.govuk-service-navigation__link');
+      if (!link) return;
+      var label = link.textContent.trim();
+      if (!dropdownData[label]) return;
+
+      var details = document.createElement('details');
+      details.className = 'app-nav-dropdown';
+
+      var summary = document.createElement('summary');
+      summary.className = 'app-nav-dropdown__button';
+      summary.setAttribute('aria-expanded', 'false');
+      summary.innerHTML = label + ' <svg class="app-nav-dropdown__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"><path d="M7 9.5L1.5 4h11L7 9.5z"/></svg>';
+
+      var ul = document.createElement('ul');
+      ul.className = 'app-nav-dropdown__content';
+
+      dropdownData[label].forEach(function(subItem) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = subItem.href;
+        a.className = 'govuk-link govuk-link--no-visited-state';
+        a.textContent = subItem.text;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      details.appendChild(summary);
+      details.appendChild(ul);
+
+      item.innerHTML = '';
+      item.appendChild(details);
+
+      details.addEventListener('toggle', function() {
+        summary.setAttribute('aria-expanded', details.open ? 'true' : 'false');
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.app-nav-dropdown[open]').forEach(function(details) {
+        if (!details.contains(e.target)) {
+          details.removeAttribute('open');
+          details.querySelector('summary').setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  });
+</script>
