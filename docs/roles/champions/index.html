@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template govuk-template--rebranded">
+  <head>
+    <meta charset="utf-8">
+    <title>Champions - GOV.UK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+
+<link rel="icon" href="/assets/rebrand/images/favicon.ico" sizes="any"><link rel="mask-icon" href="/assets/rebrand/images/govuk-mask-icon.svg" color="#1d70b8"><link rel="apple-touch-icon" href="/assets/rebrand/images/govuk-icon-180.png">
+  <script src="/assets/application.js" type="module"></script>
+
+  <link rel="stylesheet" href="/assets/application.css">
+
+
+  <meta property="og:title" content="Champions">
+
+    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+
+  <header class="govuk-header govuk-header--full-width-border" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+      <div class="govuk-header__logo">
+        <a href="/" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype-text">AI Engineering Lab</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  
+
+  <div class="govuk-service-navigation app-service-navigation"
+data-module="govuk-service-navigation"
+>
+      <div class="govuk-width-container">
+
+    <div class="govuk-service-navigation__container">
+      
+
+      
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+            Menu
+          </button>
+
+          <ul class="govuk-service-navigation__list" id="navigation" >
+
+            
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/">
+                                    
+Home
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/explore/">
+                                    
+Explore
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                  <a class="govuk-service-navigation__link" href="/roles/" aria-current="true">
+                                    
+                  <strong class="govuk-service-navigation__active-fallback">Roles</strong>
+
+                  </a>
+              </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+      <div class="govuk-width-container">
+<style>
+  .govuk-service-navigation__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .govuk-service-navigation__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-nav-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-nav-dropdown__button {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #1d70b8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px 15px 15px 15px;
+    margin: 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+  }
+
+  .app-nav-dropdown__button::-webkit-details-marker {
+    display: none;
+  }
+
+  @media (min-width: 40.0625em) {
+    .app-nav-dropdown__button {
+      font-size: 19px;
+      line-height: 1.3157894737;
+    }
+  }
+
+  .app-nav-dropdown__button:hover {
+    color: #003078;
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, .1875rem, .12em);
+    text-underline-offset: .1em;
+  }
+
+  .app-nav-dropdown__button:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .app-nav-dropdown__arrow {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  .app-nav-dropdown[open] .app-nav-dropdown__arrow {
+    transform: rotate(180deg);
+  }
+
+  .app-nav-dropdown__content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    min-width: 260px;
+    padding: 10px 0;
+    background: #ffffff;
+    border: 1px solid #b1b4b6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    margin: 0;
+  }
+
+  .app-nav-dropdown__content li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-nav-dropdown__content a {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #1d70b8;
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+  }
+
+  .app-nav-dropdown__content a:hover {
+    background-color: #f3f2f1;
+    color: #003078;
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, .1875rem, .12em);
+    text-underline-offset: .1em;
+  }
+
+  .app-nav-dropdown__content a:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none;
+  }
+
+  @media (max-width: 40.0625em) {
+    .app-nav-dropdown__content {
+      position: relative;
+      box-shadow: none;
+      border: none;
+      border-left: 4px solid #1d70b8;
+      min-width: auto;
+      padding: 0;
+      margin-left: 10px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var navList = document.querySelector('.govuk-service-navigation__list');
+    if (!navList) return;
+
+    var dropdownData = {
+      'Explore': [
+        { text: 'What AI tools can do', href: '/explore/what-ai-tools-can-do/' },
+        { text: 'How to adopt AI tools', href: '/explore/how-to-adopt-ai-tools/' },
+        { text: 'Getting started with your licenses', href: '/explore/getting-started/' },
+        { text: 'Change management resources', href: '/explore/change-management/' },
+        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab" },
+        { text: 'Community events', href: '/explore/community-events/' },
+        { text: 'Contact us', href: '/explore/contact-us/' }
+      ],
+      'Roles': [
+        { text: 'Senior leaders and decision-makers', href: '/roles/senior-leaders/' },
+        { text: 'Champions', href: '/roles/champions/' },
+        { text: 'Software engineers', href: '/roles/software-engineers/' },
+        { text: 'Delivery teams', href: '/roles/delivery-teams/' }
+      ]
+    };
+
+    var navItems = navList.querySelectorAll('.govuk-service-navigation__item');
+    navItems.forEach(function(item) {
+      var link = item.querySelector('.govuk-service-navigation__link');
+      if (!link) return;
+      var label = link.textContent.trim();
+      if (!dropdownData[label]) return;
+
+      var details = document.createElement('details');
+      details.className = 'app-nav-dropdown';
+
+      var summary = document.createElement('summary');
+      summary.className = 'app-nav-dropdown__button';
+      summary.setAttribute('aria-expanded', 'false');
+      summary.innerHTML = label + ' <svg class="app-nav-dropdown__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"><path d="M7 9.5L1.5 4h11L7 9.5z"/></svg>';
+
+      var ul = document.createElement('ul');
+      ul.className = 'app-nav-dropdown__content';
+
+      dropdownData[label].forEach(function(subItem) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = subItem.href;
+        a.className = 'govuk-link govuk-link--no-visited-state';
+        a.textContent = subItem.text;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      details.appendChild(summary);
+      details.appendChild(ul);
+
+      item.innerHTML = '';
+      item.appendChild(details);
+
+      details.addEventListener('toggle', function() {
+        summary.setAttribute('aria-expanded', details.open ? 'true' : 'false');
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.app-nav-dropdown[open]').forEach(function(details) {
+        if (!details.contains(e.target)) {
+          details.removeAttribute('open');
+          details.querySelector('summary').setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  });
+</script><a href="javascript:history.back()" class="govuk-back-link">Back</a>        <main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+<header class="app-document-header">
+  <h1 class="govuk-heading-xl">Champions</h1>
+</header>
+
+
+
+      <div class="app-prose-scope"><div class="govuk-accordion" data-module="govuk-accordion" id="accordion-champions">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-champions-heading-1">
+          What is a champion's role?
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-champions-content-1" class="govuk-accordion__section-content">
+      <p class='govuk-body'>A champion works alongside AI Engineering Lab to support the adoption of AI coding tools in their organisation.</p>
+              <p class='govuk-body'>Every organisation is different, so champions define their own role based on what their team needs. However, you will likely be involved with:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>modelling good practice by using AI coding tools effectively and visibly</li>
+                <li>supporting colleagues by answering questions and sharing techniques</li>
+                <li>collecting evidence of impact and challenges in your organisation</li>
+                <li>connecting individuals to resources and training</li>
+                <li>helping build the case for continued use of AI coding tools</li>
+              </ul>
+              <p class='govuk-body'>Becoming a champion may be a good fit if you:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>have hands-on experience with at least one AI coding tool</li>
+                <li>enjoy helping colleagues learn new technical skills</li>
+                <li>are able to explain technical concepts to different audiences</li>
+                <li>are curious about how AI can improve engineering workflows</li>
+              </ul>
+              <p class='govuk-body'>This typically involves around 2 to 4 hours per week, although the time commitment will vary depending on your organisation's size and adoption stage.</p>
+              <p class='govuk-body'>We provide support, training and resources to help you in this role.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-champions-heading-2">
+          Support and resources
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-champions-content-2" class="govuk-accordion__section-content">
+      <p class='govuk-body'>This programme supports:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>GitHub Copilot</li>
+                <li>Amazon Q</li>
+                <li>Claude Code</li>
+                <li>Cursor</li>
+                <li>Windsurf</li>
+                <li>other AI coding assistants</li>
+              </ul>
+              <p class='govuk-body'>You can access guidance on choosing the right tool for your team from the <a href='https://github.com/govuk-digital-backbone/aiengineeringlab' class='govuk-link'>AI Engineering Lab repository on GitHub</a>.</p>
+              <p class='govuk-body'>Resources available include:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>implementation tools and guidance for engineers and managers</li>
+                <li>security and compliance resources</li>
+              </ul>
+              <p class='govuk-body'>For more complex technical challenges, we also provide escalation support, including access to our forward deployed engineers.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-champions-heading-3">
+          Supporting individuals in your organisation
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-champions-content-3" class="govuk-accordion__section-content">
+      <p class='govuk-body'>Not everyone adopts new tools at the same pace. Our recommended <a href='#' class='govuk-link'>change management model</a> can help you understand and support individuals at different stages of their adoption journey.</p>
+              <p class='govuk-body'>You may find it useful to:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>identify where people are on their adoption journey</li>
+                <li>understand what might be blocking their progress</li>
+                <li>explore how to support them in their specific situation</li>
+                <li>use our resources to help people at all stages of adoption</li>
+              </ul>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-champions-heading-4">
+          Measuring impact in your organisation
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-champions-content-4" class="govuk-accordion__section-content">
+      <p class='govuk-body'>Gathering evidence of how AI coding tools are being used can help secure continued support in your department.</p>
+              <p class='govuk-body'>Our <a href='/explore/repository/' class='govuk-link'>AI Engineering Lab repository</a> includes tools and guidance to help with:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>selecting appropriate metrics</li>
+                <li>data collection methods</li>
+                <li>capturing team satisfaction and challenges</li>
+                <li>presenting findings to different audiences</li>
+              </ul>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-champions-heading-5">
+          Influencing senior leaders and decision-makers
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-champions-content-5" class="govuk-accordion__section-content">
+      <p class='govuk-body'>Champions may need to support the business case for adopting AI coding tools and advocate for extra resources and support.</p>
+              <p class='govuk-body'>The resources in our <a href='/explore/repository/' class='govuk-link'>AI Engineering Lab repository</a> include:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>materials for making business cases to senior leaders</li>
+                <li>guidance on presenting evidence</li>
+                <li>strategies for engaging leaders in your organisation</li>
+                <li>practical advice and real examples from other champions</li>
+              </ul>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-champions-heading-6">
+          Champion community and peer support
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-champions-content-6" class="govuk-accordion__section-content">
+      <p class='govuk-body'>As a champion, you'll have the opportunity to join a growing network of AI coding champions across government, with access to peer support and community events.</p>
+              <p class='govuk-body'>Through the Knowledge Hub you can:</p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>learn about our recommended change management framework and access resources</li>
+                <li>access a calendar of events and join training sessions</li>
+                <li>connect with and learn from peers in other organisations</li>
+                <li>join monthly calls and meet-ups to share successes and challenges</li>
+              </ul>
+              <p class='govuk-body'>You need a government or public sector email address to sign up. Personal email addresses are not accepted.</p>
+              <p class='govuk-body'><a href='#' class='govuk-link'>Access the Knowledge Hub</a></p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-champions-heading-7">
+          Become a Champion
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-champions-content-7" class="govuk-accordion__section-content">
+      <p class='govuk-body'><a href='https://forms.office.com/pages/responsepage.aspx?id=BXCsy8EC60O0l-ZJLRst2B_Gsfy5Zv9CpxUYtrs7SxxUQ0o1WUhYVE8zOUIxOUVETlRFUUM3QTQ1Ti4u&origin=lprLink&route=shorturl' class='govuk-link' target='_blank' rel='noopener noreferrer'>Register your interest</a> in becoming a champion and help shape the adoption of AI coding tools across government.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+    </div>
+  </div>
+        </main>
+      </div>
+
+  <footer class="govuk-footer app-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+
+  
+  <svg
+    focusable="false"
+    role="presentation"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 60"
+    height="30"
+    width="32"
+    fill="currentcolor" class="govuk-footer__crown"
+  >    <g>
+        <circle cx="20" cy="17.6" r="3.7"/>
+        <circle cx="10.2" cy="23.5" r="3.7"/>
+        <circle cx="3.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <circle cx="43.3" cy="17.6" r="3.7"/>
+        <circle cx="53.2" cy="23.5" r="3.7"/>
+        <circle cx="59.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"/>
+      </g>
+  </svg>
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>
+            <ul class="govuk-footer__inline-list">
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://www.gov.uk/help/privacy">
+                    Privacy
+                  </a>
+                </li>
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://www.gov.uk/help/cookies">
+                    Cookies
+                  </a>
+                </li>
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://www.gov.uk/contact">
+                    Contact
+                  </a>
+                </li>
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://www.gov.uk/help/accessibility-statement">
+                    Accessibility statement
+                  </a>
+                </li>
+            </ul>
+<svg class="govuk-footer__licence-logo" aria-hidden="true" focusable="false" height="17" width="41" viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">
+  <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"/>
+</svg>
+          <span class="govuk-footer__licence-description">
+            All content is available under the <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+          </span>
+      </div><div class="govuk-footer__meta-item">            <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">©&nbsp;Crown copyright</a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
