@@ -30,7 +30,9 @@ export default function(eleventyConfig) {
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dir: {
-      input: 'app'
-    }
+      input: 'app',
+      output: 'docs'
+    },
+    pathPrefix: '/aiengineeringlab_signpost/'
   }
 }
