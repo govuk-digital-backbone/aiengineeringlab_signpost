@@ -111,19 +111,31 @@ npm run audit
 
 ## Deployment
 
-The site is deployed via **GitHub Pages** from the `docs/` folder.
+The site is automatically deployed via **GitHub Actions** to **GitHub Pages** on every push to `main`.
 
 ### How it works
 
-1. Eleventy builds the source files from `app/` into `docs/`
-2. The `pathPrefix` in `eleventy.config.js` is set to `/aiengineeringlab_signpost/` so all generated URLs include the repository name
-3. GitHub Pages serves the contents of `docs/` at `https://govuk-digital-backbone.github.io/aiengineeringlab_signpost/`
+1. A push to `main` triggers the workflow in `.github/workflows/deploy.yml`
+2. The workflow installs dependencies, builds the site with Eleventy, and uploads the `docs/` output
+3. GitHub Pages serves the site at `https://govuk-digital-backbone.github.io/aiengineeringlab_signpost/`
+4. The `pathPrefix` in `eleventy.config.js` ensures all URLs include the repository name
 
 ### To deploy
 
 1. Make content changes in `app/`
-2. Run `npm run build`
-3. Commit and push (including the `docs/` folder)
+2. Commit and push to `main`
+3. The site updates automatically — check progress in the **Actions** tab on GitHub
+
+### Manual trigger
+
+You can also trigger a deployment manually from the **Actions** tab using the "Run workflow" button.
+
+### GitHub repo settings required
+
+In your repository settings, ensure GitHub Pages is configured to deploy from **GitHub Actions** (not from a branch):
+
+1. Go to **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions**
 
 ## Development Setup
 
