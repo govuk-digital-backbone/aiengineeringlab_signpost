@@ -202,3 +202,4 @@ npm install
 - **Code Quality:** ESLint, Prettier, Husky, lint-staged
 - **Testing:** Jest
 - **Hosting:** GitHub Pages (from `docs/` directory)
+
