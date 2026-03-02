@@ -18,7 +18,7 @@ title: Senior leaders and decision-makers
     },
     {
       heading: { text: "Supporting you on the adoption journey" },
-      content: { html: "<p class='govuk-body'>Adopting new tools and ways of working requires a people-led approach. We’ll provide support to help you navigate this change, including:</p><ul class='govuk-list govuk-list--bullet'><li>coaching in a <a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link'>change management framework in the Knowledge Hub</a></li><li>1-to-1 support to identify and mobilise AI champions in your organisation</li><li>change management training for your AI champions to help them drive adoption</li><li>communications plans and templates</li></ul><p class='govuk-body'><a href='/explore/how-to-adopt-ai-tools/' class='govuk-link'>Discover how to adopt AI tools</a>and how we can support you through it.</p>" }
+      content: { html: "<p class='govuk-body'>Adopting new tools and ways of working requires a people-led approach. We’ll provide support to help you navigate this change, including:</p><ul class='govuk-list govuk-list--bullet'><li>coaching in a <a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link'>change management framework in the Knowledge Hub</a></li><li>1-to-1 support to identify and mobilise AI champions in your organisation</li><li>change management training for your AI champions to help them drive adoption</li><li>communications plans and templates</li></ul><p class='govuk-body'><a href='/explore/how-to-adopt-ai-tools/' class='govuk-link'>Discover how to adopt AI tools</a> and how we can support you through it.</p>" }
     },
     {
       heading: { text: "Building a business case for AI coding tools" },
