@@ -29,7 +29,7 @@ title: Champions
         </ul>
         <p class='govuk-body'>This typically involves around 2 to 4 hours per week, although the time commitment will vary depending on your organisation's size and adoption stage.</p>
         <p class='govuk-body'>We provide support, training and resources in our <a href='/explore/change-management/' class='govuk-link'>change management framework</a> to help you in this role.
-        </p>    
+        </p>
         " }
     },
     {
