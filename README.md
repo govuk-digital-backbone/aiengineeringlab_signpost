@@ -17,7 +17,6 @@ If you use `nvm`, set the project Node version and install:
 nvm use || nvm install
 ```
 
-
 ### Installation
 
 ```bash
@@ -67,6 +66,7 @@ Check for dead links in all .md and configuration files:
 ```bash
 npm run dead-links
 ```
+
 ### Format Check
 
 Check code formatting consistency:
@@ -96,6 +96,7 @@ npm run audit
 This project uses Husky and lint-staged to enforce code quality checks before commits.
 
 After `npm install`, commits will automatically:
+
 - Run ESLint with `--fix` on changed JS files
 - Run Prettier on changed markdown, JSON, and style files
 
@@ -104,26 +105,33 @@ If a check fails, the commit is blocked. Fix the issues and try again.
 ### Troubleshooting
 
 #### Husky hooks not running after install
+
 Ensure all dependencies are installed:
+
 ```b
 npm install
 ```
 
 #### Pre-commit hook fails
+
 Run the check manually to see the error:
+
 ```
 npm run lint        # Check ESLint issues
 npm run format:check # Check formatting issues
 ```
 
 Fix issues with:
+
 ```
 npm run lint -- --fix  # Auto-fix ESLint issues
 npm run format         # Auto-format files
 ```
 
 #### Node version mismatch
+
 If you see version-related errors, use nvm:
+
 ```bash
 nvm use
 npm install

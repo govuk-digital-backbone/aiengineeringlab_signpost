@@ -1,20 +1,20 @@
 export default [
   {
-    ignores: ['node_modules/', '_site/', 'dist/']
+    ignores: ["node_modules/", "_site/", "dist/"],
   },
   {
-    files: ['**/*.js'],
+    files: ["**/*.js"],
     languageOptions: {
       ecmaVersion: 2020,
-      sourceType: 'module',
+      sourceType: "module",
       globals: {
-        console: 'readonly',
-        process: 'readonly'
-      }
+        console: "readonly",
+        process: "readonly",
+      },
     },
     rules: {
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'no-console': 'warn'
-    }
-  }
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "no-console": "warn",
+    },
+  },
 ];
