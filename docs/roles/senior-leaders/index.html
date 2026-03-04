@@ -235,7 +235,7 @@ Explore
         { text: 'How to adopt AI tools', href: '/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/' },
         { text: 'Getting started with your licenses', href: '/aiengineeringlab_signpost/explore/getting-started/' },
         { text: 'Change management resources', href: '/aiengineeringlab_signpost/explore/change-management/' },
-        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab" },
+        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
         { text: 'Community events', href: '/aiengineeringlab_signpost/explore/community-events/' },
         { text: 'Contact us', href: '/aiengineeringlab_signpost/explore/contact-us/' }
       ],
@@ -271,6 +271,10 @@ Explore
         a.href = subItem.href;
         a.className = 'govuk-link govuk-link--no-visited-state';
         a.textContent = subItem.text;
+        if (subItem.external) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
         li.appendChild(a);
         ul.appendChild(li);
       });
@@ -305,105 +309,124 @@ Explore
 
 
 
-      <div class="app-prose-scope"><div class="govuk-accordion" data-module="govuk-accordion" id="accordion-senior-leaders">
+      <div class="app-prose-scope"><p class="govuk-body">AI Engineering Lab is a UK government programme designed to help public sector departments adopt AI coding tools safely and effectively.</p>
+<p class="govuk-body">We provide:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>access and implementation of AI coding tools</li>
+  <li>personalised adoption plans tailored to your organisation</li>
+  <li>best practice guidance, training and templates</li>
+  <li>change management resources</li>
+  <li>community events and workshops</li>
+</ul>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-senior-leaders">
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-senior-leaders-heading-1">
-          What is AI Engineering Lab?
+          Is this right for my organisation?
         </span>
       </h2>
     </div>
     <div id="accordion-senior-leaders-content-1" class="govuk-accordion__section-content">
-      <p class="govuk-body">AI Engineering Lab is a UK government programme designed to help public sector departments adopt AI coding tools safely and effectively.</p>
-      <p class="govuk-body">We provide:</p><ul class="govuk-list govuk-list--bullet"><li>access and implementation of AI coding tools</li><li>personalised adoption plans tailored to your organisation</li><li>best practice guidance, training and templates</li><li>change management resources</li><li>community events and workshops</li></ul>
+      <p class="govuk-body">We work with teams at all maturity levels, from those just starting to explore AI coding tools to those already using them and wanting structured support.</p>
+              <p class="govuk-body">When you register interest, we'll assess your organisation's readiness, considering your technical infrastructure, security requirements, and team capacity. Then, we'll tailor support based on that.</p>
+              <p class="govuk-body">This programme supports departments that:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>have software engineering teams</li>
+                <li>want to improve engineering productivity</li>
+                <li>are ready to invest time in adoption and change management</li>
+                <li>have engineers available to participate in training and community activities</li>
+                <li>have senior leadership support for AI tool adoption</li>
+              </ul>
     </div>
   </div>
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-senior-leaders-heading-2">
-          Is this right for my organisation?
+          Supporting you on the adoption journey
         </span>
       </h2>
     </div>
     <div id="accordion-senior-leaders-content-2" class="govuk-accordion__section-content">
-      <p class="govuk-body">We work with teams at all maturity levels, from those just starting to explore AI coding tools to those already using them and wanting structured support.</p><p class="govuk-body">When you register interest, we'll assess your organisation's readiness, considering your technical infrastructure, security requirements, and team capacity. Then, we'll tailor support based on that.</p><p class="govuk-body">This programme supports departments that:</p><ul class="govuk-list govuk-list--bullet"><li>have software engineering teams</li><li>want to improve engineering productivity</li><li>are ready to invest time in adoption and change management</li><li>have engineers available to participate in training and community activities</li><li>have senior leadership support for AI tool adoption</li></ul>
+      <p class="govuk-body">Adopting new tools and ways of working requires a people-led approach. We'll provide support to help you navigate this change, including:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>coaching in a <a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link">change management framework in the Knowledge Hub</a></li>
+                <li>1-to-1 support to identify and mobilise AI champions in your organisation</li>
+                <li>change management training for your AI champions to help them drive adoption</li>
+                <li>communications plans and templates</li>
+              </ul>
+              <p class="govuk-body"><a href="/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/" class="govuk-link">Discover how to adopt AI tools</a> and how we can support you through it.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-senior-leaders-heading-3">
-          Supporting you on the adoption journey
+          Risk mitigation and security
         </span>
       </h2>
     </div>
     <div id="accordion-senior-leaders-content-3" class="govuk-accordion__section-content">
-      <p class="govuk-body">Adopting new tools and ways of working requires a people-led approach. We’ll provide support to help you navigate this change, including:</p><ul class="govuk-list govuk-list--bullet"><li>coaching in a <a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link">change management framework in the Knowledge Hub</a></li><li>1-to-1 support to identify and mobilise AI champions in your organisation</li><li>change management training for your AI champions to help them drive adoption</li><li>communications plans and templates</li></ul><p class="govuk-body"><a href="/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/" class="govuk-link">Discover how to adopt AI tools</a> and how we can support you through it.</p>
+      <p class="govuk-body">We can help you address common security concerns when adopting AI coding tools.</p>
+              <h3 class="govuk-heading-s">Data protection and confidentiality</h3>
+              <p class="govuk-body">Including:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>guidance on what data can and cannot be shared with AI tools</li>
+                <li>configuration options for data retention and privacy</li>
+                <li>integration with your existing security controls</li>
+              </ul>
+              <h3 class="govuk-heading-s">Code quality and security</h3>
+              <p class="govuk-body">Including:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>best practices for reviewing AI-generated code</li>
+                <li>integration with Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST) tools</li>
+                <li>testing patterns for AI-assisted development</li>
+              </ul>
+              <h3 class="govuk-heading-s">Cyber assurance</h3>
+              <p class="govuk-body">Including:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>security assessment templates</li>
+                <li>vendor assurance documentation</li>
+                <li>liaison with your security teams</li>
+              </ul>
+              <p class="govuk-body">We provide configuration guidance rather than prescriptive security approval, working with your existing governance processes.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-senior-leaders-heading-4">
-          Risk mitigation and security
+          Guidance and resources
         </span>
       </h2>
     </div>
     <div id="accordion-senior-leaders-content-4" class="govuk-accordion__section-content">
-      <p class="govuk-body">We can help you address common security concerns when adopting AI coding tools.</p>
-      <h3 class="govuk-heading-s">Data protection and confidentiality</h3>
-      <p class="govuk-body">Including:</p>
-      <ul class="govuk-list govuk-list--bullet">
-      <li>guidance on what data can and cannot be shared with AI tools</li>
-      <li>configuration options for data retention and privacy</li>
-      <li>integration with your existing security controls</li>
-      </ul>
-      <h3 class="govuk-heading-s">Code quality and security</h3>
-      <p class="govuk-body">Including:</p>
-      <ul class="govuk-list govuk-list--bullet">
-      <li>best practices for reviewing AI-generated code</li>
-      <li>integration with Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST) tools</li>
-      <li>testing patterns for AI-assisted development</li>
-      </ul>
-      <h3 class="govuk-heading-s">Cyber assurance</h3>
-      <p class="govuk-body">Including:</p>
-      <ul class="govuk-list govuk-list--bullet">
-      <li>security assessment templates</li>
-      <li>vendor assurance documentation</li>
-      <li>liaison with your security teams</li>
-      </ul>
-      <p class="govuk-body">We provide configuration guidance rather than prescriptive security approval, working with your existing governance processes.</p>
+      <h3 class="govuk-heading-s">AI Engineering Lab repository</h3>
+              <p class="govuk-body">The AI Engineering Lab repository is a central hub for guidance, best practice and training materials on using AI coding assistants in government. It also includes information on gathering data and building your case for adoption.</p>
+              <p class="govuk-body"><a href="https://github.com/govuk-digital-backbone/aiengineeringlab" class="govuk-link">Visit the AI Engineering Lab repository on GitHub</a>.</p>
+              <h3 class="govuk-heading-s">Knowledge Hub</h3>
+              <p class="govuk-body">The Knowledge Hub is where you'll find change management resources, community support and peer learning opportunities. You need a government or public sector email address to sign up. Personal email addresses are not accepted.</p>
+              <p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link">Access the Knowledge Hub</a>.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-senior-leaders-heading-5">
-          Guidance and resources
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-senior-leaders-content-5" class="govuk-accordion__section-content">
-      <h3 class="govuk-heading-s">AI Engineering Lab repository</h3>
-      <p class="govuk-body">The AI Engineering Lab repository is a central hub for guidance, best practice and training materials on using AI coding assistants in government. It also includes information on gathering data and building your case for adoption.</p>
-      <p class="govuk-body"><a href="https://github.com/govuk-digital-backbone/aiengineeringlab" class="govuk-link">Visit the AI Engineering Lab repository on GitHub</a></p>
-      <h3 class="govuk-heading-s">Knowledge Hub</h3>
-      <p class="govuk-body">The Knowledge Hub is where you'll find change management resources, community support and peer learning opportunities. You need a government or public sector email address to sign up. Personal email addresses are not accepted.</p>
-      <p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link">Access the Knowledge Hub</a></p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-senior-leaders-heading-6">
           Register your interest
         </span>
       </h2>
     </div>
-    <div id="accordion-senior-leaders-content-6" class="govuk-accordion__section-content">
-      <p class="govuk-body">To register your interest, email <a href="mailto:ai-engineering-lab@digital.cabinet-office.gov.uk" class="govuk-link">ai-engineering-lab@digital.cabinet-office.gov.uk</a></p><p class="govuk-body">You should provide information about:</p><ul class="govuk-list govuk-list--bullet"><li>what you're hoping to achieve by working with AI Engineering Lab</li><li>what AI Engineering Lab can support you with, for example knowledge sharing, adoption support, or AI licenses</li><li>the size of your engineering team and a brief description of the work they're doing</li><li>your team's capacity to work with AI Engineering Lab over the next month</li></ul>
+    <div id="accordion-senior-leaders-content-5" class="govuk-accordion__section-content">
+      <p class="govuk-body">To register your interest, email <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>.</p>
+              <p class="govuk-body">You should provide information about:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
+                <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+                <li>the size of your engineering team and a brief description of the work they're doing</li>
+                <li>your team's capacity to work with AI Engineering Lab over the next month</li>
+              </ul>
     </div>
   </div>
 </div>

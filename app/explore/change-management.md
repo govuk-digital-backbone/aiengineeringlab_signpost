@@ -28,18 +28,18 @@ title: Change management resources to support your team
 
 <p class="govuk-body">You need a government or public sector email address to sign up. Personal email addresses are not accepted.</p>
 
-<p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class='govuk-link' target='_blank' rel='noopener noreferrer'>Access the Knowledge Hub</a></p>
+<p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class='govuk-link' target='_blank' rel='noopener noreferrer'>Access the Knowledge Hub</a>.</p>
 
 <h2 class="govuk-heading-l">Register your interest</h2>
 
 <p class="govuk-body">
   To register your interest, email
-  <a href="mailto:ai-engineering-lab@digital.cabinet-office.gov.uk" class="govuk-link">ai-engineering-lab@digital.cabinet-office.gov.uk</a>
+  <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>.
 </p>
 <p class="govuk-body">You should provide information about:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>what you're hoping to achieve by working with AI Engineering Lab</li>
-  <li>what AI Engineering Lab can support you with, for example knowledge sharing, adoption support, or AI licenses</li>
+  <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
+  <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
   <li>the size of your engineering team and a brief description of the work they're doing</li>
   <li>your team's capacity to work with AI Engineering Lab over the next month</li>
 </ul>

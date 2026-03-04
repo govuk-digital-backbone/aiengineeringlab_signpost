@@ -235,7 +235,7 @@ Roles
         { text: 'How to adopt AI tools', href: '/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/' },
         { text: 'Getting started with your licenses', href: '/aiengineeringlab_signpost/explore/getting-started/' },
         { text: 'Change management resources', href: '/aiengineeringlab_signpost/explore/change-management/' },
-        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab" },
+        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
         { text: 'Community events', href: '/aiengineeringlab_signpost/explore/community-events/' },
         { text: 'Contact us', href: '/aiengineeringlab_signpost/explore/contact-us/' }
       ],
@@ -271,6 +271,10 @@ Roles
         a.href = subItem.href;
         a.className = 'govuk-link govuk-link--no-visited-state';
         a.textContent = subItem.text;
+        if (subItem.external) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
         li.appendChild(a);
         ul.appendChild(li);
       });
@@ -305,7 +309,8 @@ Roles
 
 
 
-      <div class="app-prose-scope"><h2 class="govuk-heading-l">Types of events</h2>
+      <div class="app-prose-scope"><p class="govuk-body">If you’re interested in learning more about AI coding tools in the public sector, there are many ways to get involved.</p>
+<h2 class="govuk-heading-l">Types of events</h2>
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-events">
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
@@ -316,7 +321,17 @@ Roles
       </h2>
     </div>
     <div id="accordion-events-content-1" class="govuk-accordion__section-content">
-      <p class="govuk-body">Join the community to share experiences, ask questions and learn from engineers in other departments using AI coding tools.</p><p class="govuk-body">The Knowledge Hub provides:</p><ul class="govuk-list govuk-list--bullet"><li>peer-to-peer support from engineers facing similar challenges</li><li>sharing of successes, failures and lessons learned</li><li>access to expertise across government departments</li><li>connection to champions and experienced users</li><li>recordings of past events and sessions</li><li>a calendar of upcoming events across the programme</li></ul><p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link" target="_blank" rel="noopener noreferrer">Join the cross-government AI coding tools community</a></p>
+      <p class="govuk-body">Join the community to share experiences, ask questions and learn from engineers in other departments using AI coding tools.</p>
+              <p class="govuk-body">The Knowledge Hub provides:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>peer-to-peer support from engineers facing similar challenges</li>
+                <li>sharing of successes, failures and lessons learned</li>
+                <li>access to expertise across government departments</li>
+                <li>connection to champions and experienced users</li>
+                <li>recordings of past events and sessions</li>
+                <li>a calendar of upcoming events across the programme</li>
+              </ul>
+              <p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link" target="_blank" rel="noopener noreferrer">Join the cross-government AI coding tools community</a>.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
@@ -328,7 +343,15 @@ Roles
       </h2>
     </div>
     <div id="accordion-events-content-2" class="govuk-accordion__section-content">
-      <p class="govuk-body">Participating teams share their adoption journeys, challenges and successes at cross-government show and tell sessions.</p><p class="govuk-body">You'll see:</p><ul class="govuk-list govuk-list--bullet"><li>how other teams are using AI coding tools in practice</li><li>real examples of problems solved and lessons learned</li><li>demonstrations of effective techniques and approaches</li><li>opportunities to ask questions and discuss challenges</li></ul><p class="govuk-body">Sessions are open to all participating organisations. Recordings and materials are available if you cannot attend live.</p>
+      <p class="govuk-body">Participating teams share their adoption journeys, challenges and successes at cross-government show and tell sessions.</p>
+              <p class="govuk-body">You'll see:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>how other teams are using AI coding tools in practice</li>
+                <li>real examples of problems solved and lessons learned</li>
+                <li>demonstrations of effective techniques and approaches</li>
+                <li>opportunities to ask questions and discuss challenges</li>
+              </ul>
+              <p class="govuk-body">Sessions are open to all participating organisations. Recordings and materials are available if you cannot attend live.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
@@ -340,7 +363,15 @@ Roles
       </h2>
     </div>
     <div id="accordion-events-content-3" class="govuk-accordion__section-content">
-      <p class="govuk-body">Join facilitated workshops where you'll work on real problems with support from experienced engineers.</p><p class="govuk-body">Lunch and learns are structured sessions covering:</p><ul class="govuk-list govuk-list--bullet"><li>basic and advanced AI tool techniques</li><li>best practices</li><li>security and safe usage</li><li>role-specific guidance for different types of work</li></ul><p class="govuk-body">Tech drop-ins are informal sessions where you can bring your questions and get direct support from AI-trained engineers.</p>
+      <p class="govuk-body">Join facilitated workshops where you'll work on real problems with support from experienced engineers.</p>
+              <p class="govuk-body">Lunch and learns are structured sessions covering:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>basic and advanced AI tool techniques</li>
+                <li>best practices</li>
+                <li>security and safe usage</li>
+                <li>role-specific guidance for different types of work</li>
+              </ul>
+              <p class="govuk-body">Tech drop-ins are informal sessions where you can bring your questions and get direct support from AI-trained engineers.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
@@ -352,7 +383,14 @@ Roles
       </h2>
     </div>
     <div id="accordion-events-content-4" class="govuk-accordion__section-content">
-      <p class="govuk-body">Take part in hands-on coding sessions where teams solve real challenges using AI tools.</p><p class="govuk-body">Hackathons are intensive multi-day events where you'll:</p><ul class="govuk-list govuk-list--bullet"><li>work on actual problems from your department</li><li>collaborate with engineers from other organisations</li><li>get support from technical leads and champions</li><li>share results and learn from other teams</li></ul>
+      <p class="govuk-body">Take part in hands-on coding sessions where teams solve real challenges using AI tools.</p>
+              <p class="govuk-body">Hackathons are intensive multi-day events where you'll:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>work on actual problems from your department</li>
+                <li>collaborate with engineers from other organisations</li>
+                <li>get support from technical leads and champions</li>
+                <li>share results and learn from other teams</li>
+              </ul>
     </div>
   </div>
   <div class="govuk-accordion__section">
@@ -364,7 +402,9 @@ Roles
       </h2>
     </div>
     <div id="accordion-events-content-5" class="govuk-accordion__section-content">
-      <p class="govuk-body">Champions help drive adoption in their departments and connect with champions across government through the cross-government community.</p><p class="govuk-body"><a href="/aiengineeringlab_signpost/roles/champions/" class="govuk-link">Find out more about what champions do</a></p><p class="govuk-body"><a href="https://forms.office.com/pages/responsepage.aspx?id=BXCsy8EC60O0l-ZJLRst2B_Gsfy5Zv9CpxUYtrs7SxxUQ0o1WUhYVE8zOUIxOUVETlRFUUM3QTQ1Ti4u&origin=lprLink&route=shorturl" class="govuk-link" target="_blank" rel="noopener noreferrer">Register your interest</a> in becoming a champion and help shape the adoption of AI coding tools across government.</p>
+      <p class="govuk-body">Champions help drive adoption in their departments and connect with champions across government through the cross-government community.</p>
+              <p class="govuk-body"><a href="/aiengineeringlab_signpost/roles/champions/" class="govuk-link">Find out more about what champions do</a>.</p>
+              <p class="govuk-body"><a href="https://forms.office.com/pages/responsepage.aspx?id=BXCsy8EC60O0l-ZJLRst2B_Gsfy5Zv9CpxUYtrs7SxxUQ0o1WUhYVE8zOUIxOUVETlRFUUM3QTQ1Ti4u&origin=lprLink&route=shorturl" class="govuk-link" target="_blank" rel="noopener noreferrer">Register your interest</a> in becoming a champion and help shape the adoption of AI coding tools across government.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
@@ -376,7 +416,14 @@ Roles
       </h2>
     </div>
     <div id="accordion-events-content-6" class="govuk-accordion__section-content">
-      <p class="govuk-body">To register your interest, email <a href="mailto:ai-engineering-lab@digital.cabinet-office.gov.uk" class="govuk-link">ai-engineering-lab@digital.cabinet-office.gov.uk</a></p><p class="govuk-body">You should provide information about:</p><ul class="govuk-list govuk-list--bullet"><li>what you're hoping to achieve by working with AI Engineering Lab</li><li>what AI Engineering Lab can support you with, for example knowledge sharing, adoption support, or AI licenses</li><li>the size of your engineering team and a brief description of the work they're doing</li><li>your team's capacity to work with AI Engineering Lab over the next month</li></ul>
+      <p class="govuk-body">To register your interest, email <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>.</p>
+              <p class="govuk-body">You should provide information about:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
+                <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+                <li>the size of your engineering team and a brief description of the work they're doing</li>
+                <li>your team's capacity to work with AI Engineering Lab over the next month</li>
+              </ul>
     </div>
   </div>
 </div>
