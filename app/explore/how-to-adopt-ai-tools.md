@@ -53,7 +53,7 @@ title: How to adopt AI tools
       heading: { text: "My team is confident using AI coding tools" },
       content: { html: "
         <p class='govuk-body'>If your teams are already using AI coding tools confidently, we can help you build on what's working, connect you to the wider community, and access best practice resources.</p>
-        <p class='govuk-body'>To discuss how we can support your next stage, email <a href='mailto:ai-engineering-lab@digital.cabinet-office.gov.uk' class='govuk-link'>ai-engineering-lab@digital.cabinet-office.gov.uk</a></p>
+        <p class='govuk-body'>To discuss how we can support your next stage, email <a href='mailto:gdsengineeringexcellence@dsit.gov.uk' class='govuk-link'>gdsengineeringexcellence@dsit.gov.uk</a></p>
         <p class='govuk-body'>We aim to respond within 2 working days.</p>
       " }
     },
