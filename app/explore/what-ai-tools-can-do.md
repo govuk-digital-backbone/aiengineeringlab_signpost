@@ -5,7 +5,7 @@ title: What AI tools can do
 
 AI coding tools support engineers in their day-to-day work. They help with routine tasks so engineers can focus on the work that matters most.
 
-The UK Government supports safe, sustainable AI adoption as part of its blueprint for improving public services through responsible use of technology. AI Engineering Lab is part of this effort, providing support to departments adopting AI tools.
+The UK government supports safe, sustainable AI adoption as part of its blueprint for improving public services through responsible use of technology. AI Engineering Lab is part of this effort, providing support to departments adopting AI tools.
 
 ## How AI tools can help
 
@@ -28,12 +28,12 @@ AI Engineering Lab can support your team at every stage of the adoption journey.
 
 <p class="govuk-body">
   To register your interest, email
-  <a href="mailto:ai-engineering-lab@digital.cabinet-office.gov.uk" class="govuk-link">ai-engineering-lab@digital.cabinet-office.gov.uk</a>
+  <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>
 </p>
 <p class="govuk-body">You should provide information about:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>what you're hoping to achieve by working with AI Engineering Lab</li>
-  <li>what AI Engineering Lab can support you with, for example knowledge sharing, adoption support, or AI licenses</li>
+  <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
+  <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
   <li>the size of your engineering team and a brief description of the work they're doing</li>
   <li>your team's capacity to work with AI Engineering Lab over the next month</li>
 </ul>

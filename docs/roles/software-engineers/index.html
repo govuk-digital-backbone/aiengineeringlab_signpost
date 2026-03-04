@@ -235,7 +235,7 @@ Explore
         { text: 'How to adopt AI tools', href: '/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/' },
         { text: 'Getting started with your licenses', href: '/aiengineeringlab_signpost/explore/getting-started/' },
         { text: 'Change management resources', href: '/aiengineeringlab_signpost/explore/change-management/' },
-        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab" },
+        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
         { text: 'Community events', href: '/aiengineeringlab_signpost/explore/community-events/' },
         { text: 'Contact us', href: '/aiengineeringlab_signpost/explore/contact-us/' }
       ],
@@ -271,6 +271,10 @@ Explore
         a.href = subItem.href;
         a.className = 'govuk-link govuk-link--no-visited-state';
         a.textContent = subItem.text;
+        if (subItem.external) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
         li.appendChild(a);
         ul.appendChild(li);
       });
@@ -305,40 +309,29 @@ Explore
 
 
 
-      <div class="app-prose-scope"><div class="govuk-accordion" data-module="govuk-accordion" id="accordion-engineers">
+      <div class="app-prose-scope"><p class="govuk-body">If you’re a software engineer in the public sector, the AI Engineering Lab repository provides reusable guidance, templates, training materials, and best practices for safely and effectively adopting AI code assistants.</p>
+<p class="govuk-body">You'll find: </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>guides to get you started with different AI coding tools </li>
+  <li>prompt libraries and examples</li>
+  <li>code examples and implementation patterns</li>
+  <li>security guardrails and configuration guidance</li>
+  <li>testing approaches for AI-generated code</li>
+</ul>
+<p class="govuk-body"><a href="https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main" class="govuk-link" target="_blank" rel="noopener noreferrer">Visit the AI Engineering Lab repository on GitHub</a>.</p>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-engineers">
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-engineers-heading-1">
-          AI Engineering Lab repository
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-engineers-content-1" class="govuk-accordion__section-content">
-      <p class="govuk-body">The AI Engineering Lab repository provides reusable guidance, templates, training materials, and practices for safely and effectively adopting AI code assistants across government.</p>
-              <p class="govuk-body">You'll find:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>guides to get you started with different AI coding tools</li>
-                <li>prompt libraries and examples</li>
-                <li>code examples and implementation patterns</li>
-                <li>security guardrails and configuration guidance</li>
-                <li>testing approaches for AI-generated code</li>
-              </ul>
-              <p class="govuk-body"><a href="https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main" class="govuk-link" target="_blank" rel="noopener noreferrer">Visit the AI Engineering Lab repository on GitHub</a></p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-engineers-heading-2">
           Training, events and community
         </span>
       </h2>
     </div>
-    <div id="accordion-engineers-content-2" class="govuk-accordion__section-content">
+    <div id="accordion-engineers-content-1" class="govuk-accordion__section-content">
       <p class="govuk-body">Build your skills and connect with other engineers across government.</p>
               <p class="govuk-body">You can find a calendar of upcoming workshops, events and training sessions on the Knowledge Hub. You need a government or public sector email address to sign up. Personal email addresses are not accepted.</p>
-              <p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link" target="_blank" rel="noopener noreferrer">Access the Knowledge Hub</a></p>
+              <p class="govuk-body"><a href="https://khub.net/group/ai-engineering-lab/group-home" class="govuk-link" target="_blank" rel="noopener noreferrer">Access the Knowledge Hub</a>.</p>
               <h3 class="govuk-heading-s">Workshops and hands-on sessions</h3>
               <p class="govuk-body">Join facilitated workshops where you'll work on real problems with support from experienced engineers.</p>
               <h3 class="govuk-heading-s">Hackathons and coding challenges</h3>
@@ -350,12 +343,12 @@ Explore
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-engineers-heading-3">
+        <span class="govuk-accordion__section-button" id="accordion-engineers-heading-2">
           Getting support
         </span>
       </h2>
     </div>
-    <div id="accordion-engineers-content-3" class="govuk-accordion__section-content">
+    <div id="accordion-engineers-content-2" class="govuk-accordion__section-content">
       <p class="govuk-body">We take a people-led approach to supporting organisations to adopt AI coding tools and new ways of working.</p>
               <p class="govuk-body">Your organisation’s champions are trained in our recommended <a href="/aiengineeringlab_signpost/explore/change-management/" class="govuk-link">change management framework</a> to support you and your teams.</p>
               <p class="govuk-body">For support you can:</p>
@@ -369,17 +362,17 @@ Explore
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-engineers-heading-4">
+        <span class="govuk-accordion__section-button" id="accordion-engineers-heading-3">
           Register your interest
         </span>
       </h2>
     </div>
-    <div id="accordion-engineers-content-4" class="govuk-accordion__section-content">
-      <p class="govuk-body">To register your interest, email <a href="mailto:ai-engineering-lab@digital.cabinet-office.gov.uk" class="govuk-link">ai-engineering-lab@digital.cabinet-office.gov.uk</a></p>
+    <div id="accordion-engineers-content-3" class="govuk-accordion__section-content">
+      <p class="govuk-body">To register your interest, email <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>.</p>
               <p class="govuk-body">You should provide information about:</p>
               <ul class="govuk-list govuk-list--bullet">
-                <li>what you're hoping to achieve by working with AI Engineering Lab</li>
-                <li>what AI Engineering Lab can support you with, for example knowledge sharing, adoption support, or AI licences</li>
+                <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
+                <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
                 <li>the size of your engineering team and a brief description of the work they're doing</li>
                 <li>your team's capacity to work with AI Engineering Lab over the next month</li>
               </ul>

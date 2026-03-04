@@ -235,7 +235,7 @@ Roles
         { text: 'How to adopt AI tools', href: '/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/' },
         { text: 'Getting started with your licenses', href: '/aiengineeringlab_signpost/explore/getting-started/' },
         { text: 'Change management resources', href: '/aiengineeringlab_signpost/explore/change-management/' },
-        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab" },
+        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
         { text: 'Community events', href: '/aiengineeringlab_signpost/explore/community-events/' },
         { text: 'Contact us', href: '/aiengineeringlab_signpost/explore/contact-us/' }
       ],
@@ -271,6 +271,10 @@ Roles
         a.href = subItem.href;
         a.className = 'govuk-link govuk-link--no-visited-state';
         a.textContent = subItem.text;
+        if (subItem.external) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
         li.appendChild(a);
         ul.appendChild(li);
       });
@@ -306,9 +310,7 @@ Roles
 
 
       <div class="app-prose-scope"><p class="govuk-body">Get in touch to register your interest, or if you have questions or feedback.</p>
-<p class="govuk-body"><strong>Email</strong></p>
-<p class="govuk-body"><a href="mailto:ai-engineering-lab@digital.cabinet-office.gov.uk" class="govuk-link">ai-engineering-lab@digital.cabinet-office.gov.uk</a></p>
-<p class="govuk-body">We aim to respond within 2 working days.</p>
+<p class="govuk-body">Email us at <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>. We aim to respond within 2 working days.</p>
 </div>
 
 

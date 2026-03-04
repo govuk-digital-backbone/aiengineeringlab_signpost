@@ -5,16 +5,13 @@ title: Delivery teams
 
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
+<p class="govuk-body">AI Engineering Lab is a UK government programme designed to help public sector departments adopt AI coding tools safely and effectively.</p>
+
+<p class="govuk-body">We work with engineering teams to provide tooling implementation, training, best practice guidance, and change management support.</p>
+
 {{ govukAccordion({
   id: "accordion-delivery-teams",
   items: [
-    {
-      heading: { text: "What is AI Engineering Lab?" },
-      content: { html: "
-        <p class='govuk-body'>AI Engineering Lab is a UK government programme designed to help public sector departments adopt AI coding tools safely and effectively.</p>
-        <p class='govuk-body'>We work with engineering teams to provide tooling implementation, training, best practice guidance, and change management support.</p>
-      " }
-    },
     {
       heading: { text: "How this affects delivery work" },
       content: { html: "
@@ -27,7 +24,7 @@ title: Delivery teams
           <li>new considerations for code review and quality assurance</li>
           <li>different patterns in team capacity and velocity</li>
         </ul>
-        <p class='govuk-body'><a href='/explore/how-to-adopt-ai-tools/' class='govuk-link'>Understand the adoption journey</a></p>
+        <p class='govuk-body'><a href='/explore/how-to-adopt-ai-tools/' class='govuk-link'>Understand the adoption journey</a>.</p>
       " }
     },
     {
@@ -41,14 +38,23 @@ title: Delivery teams
           <li>support engineers through the change</li>
           <li>measure whether adoption is delivering value</li>
         </ul>
-        <p class='govuk-body'><a href='/explore/change-management/' class='govuk-link'>Find out about our people-led change approach</a></p>
+        <p class='govuk-body'><a href='/explore/change-management/' class='govuk-link'>Find out about our people-led change approach</a>.</p>
         <p class='govuk-body'>You can access change management resources, connect with delivery managers and peers in other departments, and join community events through the Knowledge Hub. You need a government or public sector email address to sign up. Personal email addresses are not accepted.</p>
-        <p class='govuk-body'><a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link' target='_blank' rel='noopener noreferrer'>Access the Knowledge Hub</a></p>
+        <p class='govuk-body'><a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link' target='_blank' rel='noopener noreferrer'>Access the Knowledge Hub</a>.</p>
       " }
     },
     {
       heading: { text: "Register your interest" },
-      content: { html: "<p class='govuk-body'>To register your interest, email <a href='mailto:ai-engineering-lab@digital.cabinet-office.gov.uk' class='govuk-link'>ai-engineering-lab@digital.cabinet-office.gov.uk</a></p><p class='govuk-body'>You should provide information about:</p><ul class='govuk-list govuk-list--bullet'><li>what you're hoping to achieve by working with AI Engineering Lab</li><li>what AI Engineering Lab can support you with, for example knowledge sharing, adoption support, or AI licenses</li><li>the size of your engineering team and a brief description of the work they're doing</li><li>your team's capacity to work with AI Engineering Lab over the next month</li></ul>" }
+      content: { html: "
+        <p class='govuk-body'>To register your interest, email <a href='mailto:gdsengineeringexcellence@dsit.gov.uk' class='govuk-link'>gdsengineeringexcellence@dsit.gov.uk</a>.</p>
+        <p class='govuk-body'>You should provide information about:</p>
+        <ul class='govuk-list govuk-list--bullet'>
+          <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
+          <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+          <li>the size of your engineering team and a brief description of the work they're doing</li>
+          <li>your team's capacity to work with AI Engineering Lab over the next month</li>
+        </ul>
+      " }
     }
   ]
 }) }}

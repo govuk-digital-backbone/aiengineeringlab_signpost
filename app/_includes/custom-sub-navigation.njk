@@ -149,7 +149,7 @@
         { text: 'How to adopt AI tools', href: '{{ "/explore/how-to-adopt-ai-tools/" | url }}' },
         { text: 'Getting started with your licenses', href: '{{ "/explore/getting-started/" | url }}' },
         { text: 'Change management resources', href: '{{ "/explore/change-management/" | url }}' },
-        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab" },
+        { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
         { text: 'Community events', href: '{{ "/explore/community-events/" | url }}' },
         { text: 'Contact us', href: '{{ "/explore/contact-us/" | url }}' }
       ],
@@ -185,6 +185,10 @@
         a.href = subItem.href;
         a.className = 'govuk-link govuk-link--no-visited-state';
         a.textContent = subItem.text;
+        if (subItem.external) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
         li.appendChild(a);
         ul.appendChild(li);
       });
