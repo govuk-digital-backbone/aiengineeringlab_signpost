@@ -39,10 +39,7 @@ title: Community events
           <li>connecting with the AI Engineering Lab community</li>
         </ul>
         <p class='govuk-body'>The hackathon will take place from 9am to 5pm at:</p>
-        <p class='govuk-body'>CodeNode</p>
-        <p class='govuk-body'>10 South Place</p>
-        <p class='govuk-body'>London</p>
-        <p class='govuk-body'>EC2M 7EB</p>
+        <p class='govuk-body'>CodeNode<br>10 South Place<br>London<br>EC2M 7EB</p>
       " }
     },
     {
