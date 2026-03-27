@@ -51,6 +51,7 @@ title: Senior leaders and decision-makers
     {
       heading: { text: "Risk mitigation and security" },
       content: { html: "
+        <p class='govuk-body'>Before adopting AI tooling, your organisation should have an AI policy in place. The <a href='https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html' class='govuk-link'>AI playbook for the UK government</a> provides guidance on working with AI technologies safely, effectively and responsibly.</p>
         <p class='govuk-body'>We can help you address common security concerns when adopting AI coding tools.</p>
         <h3 class='govuk-heading-s'>Data protection and confidentiality</h3>
         <p class='govuk-body'>Including:</p>
