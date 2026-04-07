@@ -142,6 +142,14 @@ title: Explore AI Engineering Lab
   <div class="dfe-card">
     <div class="dfe-card-container">
       <h3 class="govuk-heading-m">
+        <a href="/roles/sponspors/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Sponsors</a>
+      </h3>
+      <p class="govuk-body">Shape the conditions for successful AI coding tool adoption in your organisation.</p>
+    </div>
+  </div>
+  <div class="dfe-card">
+    <div class="dfe-card-container">
+      <h3 class="govuk-heading-m">
         <a href="/roles/delivery-teams/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Delivery teams</a>
       </h3>
       <p class="govuk-body">How AI coding tools fit into agile delivery and your role.</p>
