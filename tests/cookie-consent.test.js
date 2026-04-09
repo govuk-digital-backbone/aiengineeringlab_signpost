@@ -209,7 +209,6 @@ describe("Hide banner button", () => {
     );
     manager.init();
 
-    // Accept first to show accepted message with Hide button
     document.querySelector("[data-accept-cookies]").click();
     document.querySelector("[data-hide-cookie-banner]").click();
 
