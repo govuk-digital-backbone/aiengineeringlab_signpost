@@ -26,16 +26,19 @@ describe("Footer Links", () => {
       "utf8"
     );
     expect(config).toMatch(
-      /text: 'Privacy', href: 'https:\/\/www.gov.uk\/help\/privacy'/
+      /text: "Privacy", href: "https:\/\/www.gov.uk\/help\/privacy"/
     );
     expect(config).toMatch(
-      /text: 'Cookies', href: 'https:\/\/www.gov.uk\/help\/cookies'/
+      /text: "Cookies", href: "https:\/\/www.gov.uk\/help\/cookies"/
     );
     expect(config).toMatch(
-      /text: 'Contact', href: 'https:\/\/www.gov.uk\/contact'/
+      /text: "Contact", href: "https:\/\/www.gov.uk\/contact"/
     );
     expect(config).toMatch(
-      /text: 'Accessibility statement', href: 'https:\/\/www.gov.uk\/help\/accessibility-statement'/
+      /text: "Accessibility statement"/
+    );
+    expect(config).toMatch(
+      /href: "https:\/\/www.gov.uk\/help\/accessibility-statement"/
     );
   });
   // Skipping this test for now as external link dependency.

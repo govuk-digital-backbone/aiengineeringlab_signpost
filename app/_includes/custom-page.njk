@@ -1,5 +1,14 @@
 {% extends "layouts/base.njk" %}
 
+{% block head %}
+  {{ super() }}
+  {% include "../_includes/analytics.njk" %}
+{% endblock %}
+
+{% block bodyStart %}
+  {% include "../_includes/cookie-banner.njk" %}
+{% endblock %}
+
 {% block header %}
   <header class="govuk-header govuk-header--full-width-border" data-module="govuk-header">
     <div class="govuk-header__container govuk-width-container">

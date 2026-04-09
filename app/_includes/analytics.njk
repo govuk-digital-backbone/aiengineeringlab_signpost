@@ -1,0 +1,23 @@
+{% if options.googleAnalyticsId %}
+  <!-- Google Analytics — loaded only after cookie consent. See cookie-banner.njk. -->
+  <script>
+    window.GA_ID = '{{ options.googleAnalyticsId }}';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Disable GA by default; enabled only when cookie consent is accepted
+    window['ga-disable-' + window.GA_ID] = true;
+
+    (function() {
+      var analyticsCookieAccepted = document.cookie.includes('analytics_consent=accepted');
+      if (analyticsCookieAccepted) {
+        window['ga-disable-' + window.GA_ID] = false;
+      } else if (!document.cookie.includes('analytics_consent')) {
+        // No policy cookie set yet — keep GA disabled until user chooses
+        window['ga-disable-' + window.GA_ID] = true;
+      } else {
+        window['ga-disable-' + window.GA_ID] = true;
+      }
+    })();
+  </script>
+{% endif %}
