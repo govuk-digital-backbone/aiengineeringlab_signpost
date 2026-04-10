@@ -14,6 +14,7 @@ describe("Layout and Navigation", () => {
     "app/roles/delivery-teams.md",
     "app/roles/champions.md",
     "app/roles/senior-leaders.md",
+    "app/roles/sponspors.md",
   ];
   const homepage = "app/index.md";
 
