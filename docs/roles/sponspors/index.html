@@ -233,7 +233,7 @@ Explore
       'Explore': [
         { text: 'What AI tools can do', href: '/aiengineeringlab_signpost/explore/what-ai-tools-can-do/' },
         { text: 'How to adopt AI tools', href: '/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/' },
-        { text: 'Getting started with your licenses', href: '/aiengineeringlab_signpost/explore/getting-started/' },
+        { text: 'Request and set up licences', href: '/aiengineeringlab_signpost/explore/getting-started/' },
         { text: 'Change management resources', href: '/aiengineeringlab_signpost/explore/change-management/' },
         { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
         { text: 'Community events', href: '/aiengineeringlab_signpost/explore/community-events/' },
@@ -261,22 +261,7 @@ Explore
       var summary = document.createElement('summary');
       summary.className = 'app-nav-dropdown__button';
       summary.setAttribute('aria-expanded', 'false');
-
-      var labelTextNode = document.createTextNode(label + ' ');
-      summary.appendChild(labelTextNode);
-
-      var svgNS = 'http://www.w3.org/2000/svg';
-      var svg = document.createElementNS(svgNS, 'svg');
-      svg.setAttribute('class', 'app-nav-dropdown__arrow');
-      svg.setAttribute('xmlns', svgNS);
-      svg.setAttribute('viewBox', '0 0 14 14');
-      svg.setAttribute('fill', 'currentColor');
-
-      var path = document.createElementNS(svgNS, 'path');
-      path.setAttribute('d', 'M7 9.5L1.5 4h11L7 9.5z');
-      svg.appendChild(path);
-
-      summary.appendChild(svg);
+      summary.innerHTML = label + ' <svg class="app-nav-dropdown__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"><path d="M7 9.5L1.5 4h11L7 9.5z"/></svg>';
 
       var ul = document.createElement('ul');
       ul.className = 'app-nav-dropdown__content';
