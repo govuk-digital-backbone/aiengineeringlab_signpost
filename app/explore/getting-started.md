@@ -89,14 +89,13 @@ title: Request and set up licences
         <p class='govuk-body'>For manager tools, see the relevant getting started and set up guides in the <a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/manager-tool-guides' class='govuk-link' target='_blank' rel='noopener noreferrer'>manager tool guides folder</a>.</p>
         <h3 class='govuk-heading-s'>Learn how to use your AI tool</h3>
         <p class='govuk-body'>All guidance and documentation is available in the <a href='https://github.com/govuk-digital-backbone/aiengineeringlab' class='govuk-link' target='_blank' rel='noopener noreferrer'>AI Engineering Lab repository</a>.</p>
-        <ul class='govuk-list govuk-list--bullet'>
+        <ol class='govuk-list govuk-list--number'>
           <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/manager-tool-guides' class='govuk-link' target='_blank' rel='noopener noreferrer'>Read the manager tool guides</a> for installation and configuration instructions for your AI coding tool.</li>
           <li>Share the <a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/user-tool-guides' class='govuk-link' target='_blank' rel='noopener noreferrer'>user tool guides</a> with your team for information on how to use each tool.</li>
           <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/prompt-library' class='govuk-link' target='_blank' rel='noopener noreferrer'>Access the prompt library</a> for examples and techniques to use AI coding tools effectively.</li>
           <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/playbooks' class='govuk-link' target='_blank' rel='noopener noreferrer'>Explore the playbooks</a> for best practices and guidance on specific tasks.</li>
           <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/blob/main/governance/guardrails-base.md' class='govuk-link' target='_blank' rel='noopener noreferrer'>Review the guardrails</a> to understand what data you can and cannot share with AI tools.</li>
-        </ul>
-        <h3 class='govuk-heading-s'>Support adoption in your organisation</h3>
+        </ol>    <h3 class='govuk-heading-s'>Support adoption in your organisation</h3>
         <p class='govuk-body'>To support adoption:</p>
         <ul class='govuk-list govuk-list--bullet'>
           <li><a href='/explore/change-management/' class='govuk-link'>read about our recommended change management framework</a></li>
