@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ "/assets/custom.css" | canonicalUrl }}">
+{% endblock %}
+
 {% block header %}
   <header class="govuk-header govuk-header--full-width-border" data-module="govuk-header">
     <div class="govuk-header__container govuk-width-container">

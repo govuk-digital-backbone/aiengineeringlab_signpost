@@ -5,7 +5,7 @@ describe("Layout and Navigation", () => {
   const pages = [
     "app/explore/community-events.md",
     "app/explore/change-management.md",
-    "app/explore/how-to-adopt-ai-tools.md",
+    "app/explore/how-to-adopt-ai-coding-tools.md",
     "app/explore/getting-started.md",
     "app/explore/contact-us.md",
     "app/explore/what-ai-coding-tools-can-do.md",
