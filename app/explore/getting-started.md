@@ -1,11 +1,11 @@
 ---
 layout: ../_includes/custom-page.njk
-title: Request and set up licences
+title: Getting started with your licences
 ---
 
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
-<p class="govuk-body">Find out how to request AI tool licences for your team and get set up with support from AI Engineering Lab.</p>
+<p class="govuk-body">Find out how to request AI tool licences for your team and get started with guidance from AI Engineering Lab.</p>
 
 {{ govukAccordion({
   id: "accordion-getting-started",
@@ -15,9 +15,9 @@ title: Request and set up licences
       content: { html: "
         <p class='govuk-body'>Your team should have:</p>
         <ul class='govuk-list govuk-list--bullet'>
-          <li>a clear use case for using AI tools</li>
+          <li>a clear use case for using AI coding tools</li>
           <li>time and capacity to test and adopt the tooling</li>
-          <li>agreement within your organisation to use AI tools</li>
+          <li>agreement within your organisation to use AI coding tools</li>
           <li>approval from your cyber security team to request licences</li>
           <li>a sponsor</li>
         </ul>
@@ -25,7 +25,7 @@ title: Request and set up licences
         <p class='govuk-body'>You must have a sponsor before requesting licences.</p>
         <p class='govuk-body'>Sponsors are usually a senior member of your team or organisation who can:</p>
         <ul class='govuk-list govuk-list--bullet'>
-          <li>support your team's use of AI tools</li>
+          <li>support your team's use of AI coding tools</li>
           <li>confirm your use case</li>
           <li>help remove organisational or delivery blockers</li>
         </ul>
@@ -43,7 +43,7 @@ title: Request and set up licences
         </ul>
         <p class='govuk-body'>If you are unsure about any of these steps, speak to your local IT or security team before proceeding.</p>
         <h3 class='govuk-heading-s'>Device requirements</h3>
-        <p class='govuk-body'>You may need to use a managed (work-issued) device to access AI tools. This depends on your organisation's security policies and the AI tool you are using.</p>
+        <p class='govuk-body'>You may need to use a managed (work-issued) device to access AI coding tools. This depends on your organisation's security policies and the AI tool you are using.</p>
         <p class='govuk-body'>Before getting set up, you should confirm with your local IT or security team:</p>
         <ul class='govuk-list govuk-list--bullet'>
           <li>if you will be working from a corporate device, VDI, or secure network zone, firewall and connectivity rules can differ between these environments</li>
@@ -52,10 +52,10 @@ title: Request and set up licences
         </ul>
         <p class='govuk-body'>Check with your local IT or security team if you are unsure.</p>
         <h3 class='govuk-heading-s'>Permissions and responsibilities</h3>
-        <p class='govuk-body'>When using AI tools, your team is responsible for:</p>
+        <p class='govuk-body'>When using AI coding tools, your team is responsible for:</p>
         <ul class='govuk-list govuk-list--bullet'>
           <li>following your organisation's security and data policies</li>
-          <li>only using AI tools with data classified at OFFICIAL or OFFICIAL-SENSITIVE, unless the specific tool has been separately accredited for higher classifications</li>
+          <li>only using AI coding tools with data classified at OFFICIAL or OFFICIAL-SENSITIVE, unless the specific tool has been separately accredited for higher classifications</li>
           <li>never including personal data or authentication credentials in prompts or context</li>
           <li>security configurations (such as firewall rules and security group settings), including financial account data and information classified above OFFICIAL</li>
           <li>reviewing and validating all AI-generated outputs before using them</li>
@@ -93,8 +93,8 @@ title: Request and set up licences
           <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/manager-tool-guides' class='govuk-link' target='_blank' rel='noopener noreferrer'>Read the manager tool guides</a> for installation and configuration instructions for your AI coding tool.</li>
           <li>Share the <a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/user-tool-guides' class='govuk-link' target='_blank' rel='noopener noreferrer'>user tool guides</a> with your team for information on how to use each tool.</li>
           <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/prompt-library' class='govuk-link' target='_blank' rel='noopener noreferrer'>Access the prompt library</a> for examples and techniques to use AI coding tools effectively.</li>
-          <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/playbooks' class='govuk-link' target='_blank' rel='noopener noreferrer'>Explore the playbooks</a> for best practices and guidance on specific tasks.</li>
-          <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/blob/main/governance/guardrails-base.md' class='govuk-link' target='_blank' rel='noopener noreferrer'>Review the guardrails</a> to understand what data you can and cannot share with AI tools.</li>
+          <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/tree/main/playbooks' class='govuk-link' target='_blank' rel='noopener noreferrer'>Explore the playbooks</a> for guidance on specific tasks.</li>
+          <li><a href='https://github.com/govuk-digital-backbone/aiengineeringlab/blob/main/governance/guardrails-base.md' class='govuk-link' target='_blank' rel='noopener noreferrer'>Review the guardrails</a> to understand what data you can and cannot share with AI coding tools.</li>
         </ol>    <h3 class='govuk-heading-s'>Support adoption in your organisation</h3>
         <p class='govuk-body'>To support adoption:</p>
         <ul class='govuk-list govuk-list--bullet'>
