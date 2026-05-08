@@ -2,17 +2,19 @@
 <html lang="en" class="govuk-template govuk-template--rebranded">
   <head>
     <meta charset="utf-8">
-    <title>How to adopt AI tools - GOV.UK</title>
+    <title>What AI coding tools can do - GOV.UK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#1d70b8">
 
 <link rel="icon" href="/aiengineeringlab_signpost/assets/rebrand/images/favicon.ico" sizes="any"><link rel="mask-icon" href="/aiengineeringlab_signpost/assets/rebrand/images/govuk-mask-icon.svg" color="#1d70b8"><link rel="apple-touch-icon" href="/aiengineeringlab_signpost/assets/rebrand/images/govuk-icon-180.png">
-  <script src="/aiengineeringlab_signpost/assets/application.js" type="module"></script>
+    <script src="/aiengineeringlab_signpost/assets/application.js" type="module"></script>
 
   <link rel="stylesheet" href="/aiengineeringlab_signpost/assets/application.css">
 
 
-  <meta property="og:title" content="How to adopt AI tools">
+  <meta property="og:title" content="What AI coding tools can do">
+
+  <link rel="stylesheet" href="/aiengineeringlab_signpost/assets/custom.css">
 
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -231,8 +233,8 @@ Roles
 
     var dropdownData = {
       'Explore': [
-        { text: 'What AI tools can do', href: '/aiengineeringlab_signpost/explore/what-ai-tools-can-do/' },
-        { text: 'How to adopt AI tools', href: '/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/' },
+        { text: 'What AI coding tools can do', href: '/aiengineeringlab_signpost/explore/what-ai-coding-tools-can-do/' },
+        { text: 'How to adopt AI coding tools', href: '/aiengineeringlab_signpost/explore/how-to-adopt-ai-coding-tools/' },
         { text: 'Request and set up licences', href: '/aiengineeringlab_signpost/explore/getting-started/' },
         { text: 'Change management resources', href: '/aiengineeringlab_signpost/explore/change-management/' },
         { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
@@ -261,7 +263,21 @@ Roles
       var summary = document.createElement('summary');
       summary.className = 'app-nav-dropdown__button';
       summary.setAttribute('aria-expanded', 'false');
-      summary.innerHTML = label + ' <svg class="app-nav-dropdown__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"><path d="M7 9.5L1.5 4h11L7 9.5z"/></svg>';
+      var labelTextNode = document.createTextNode(label + ' ');
+      summary.appendChild(labelTextNode);
+
+      var svgNS = 'http://www.w3.org/2000/svg';
+      var svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('class', 'app-nav-dropdown__arrow');
+      svg.setAttribute('xmlns', svgNS);
+      svg.setAttribute('viewBox', '0 0 14 14');
+      svg.setAttribute('fill', 'currentColor');
+
+      var path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('d', 'M7 9.5L1.5 4h11L7 9.5z');
+      svg.appendChild(path);
+
+      summary.appendChild(svg);
 
       var ul = document.createElement('ul');
       ul.className = 'app-nav-dropdown__content';
@@ -305,95 +321,37 @@ Roles
     <div class="govuk-grid-column-full">
       
 <header class="app-document-header">
-  <h1 class="govuk-heading-xl">How to adopt AI tools</h1>
+  <h1 class="govuk-heading-xl">What AI coding tools can do</h1>
 </header>
 
 
 
-      <div class="app-prose-scope"><p class="govuk-body">If you're interested in adopting AI tools, AI Engineering Lab can help you.</p>
-<p class="govuk-body">You'll start by assessing where your team is with AI tools. This is important to understand because organisations progress at different paces, with some moving quickly and others taking longer.</p>
-<p class="govuk-body">Once you know this, we can work with you to agree on a tailored plan. Below, you will find examples of what each adoption stage looks like for these different types of teams.</p>
-<h2 class="govuk-heading-l">What sort of team do you have?</h2>
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-adoption">
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-adoption-heading-1">
-          My team has no experience with AI coding tools
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-adoption-content-1" class="govuk-accordion__section-content">
-      <p class="govuk-body">If your teams are new to AI coding tools, we'll provide intensive support to get adoption started.</p>
-              <p class="govuk-body">The journey typically involves the following steps.</p>
-              <h3 class="govuk-heading-s">1. Register your interest</h3>
-              <p class="govuk-body">Once you have registered your interest, we'll arrange conversations to understand your situation. This typically takes 2 to 4 weeks for more complex cases.</p>
-              <h3 class="govuk-heading-s">2. Identify your organisation's needs</h3>
-              <p class="govuk-body">We'll discuss your current setup, goals, constraints, and identify senior sponsors. You'll receive an adoption plan tailored to your starting point. Teams new to AI coding tools get more intensive help, with forward deployed engineers working alongside them.</p>
-              <h3 class="govuk-heading-s">3. Build skills and new ways of working</h3>
-              <p class="govuk-body">A dedicated support team (forward deployed engineer, delivery manager, and change lead) will work with you. Forward deployed engineers join your teams, working alongside them on real code. Training is hands-on, including workshops, pairing sessions, and hackathons. Forward deployed engineers are trained in our change management framework to support and guide teams.</p>
-              <p class="govuk-body">We offer coaching to senior leaders and sponsors on our change management framework. We'll identify and develop AI champions in our change management framework, with protected time agreed. Our AI champion community will provide support throughout the adoption journey, including with engagement and communications. The change lead works on adoption blockers and addresses resistance. You'll connect to the cross-government community for peer support.</p>
-              <h3 class="govuk-heading-s">4. Embed and grow capability</h3>
-              <p class="govuk-body">Before direct support ends, you'll need to consider ongoing investment, including licence costs. Evidence gathered through the programme will support your business case. Adoption continues after our support ends, sustained by your champions, ongoing community connection, and access to best practice resources.</p>
-              <p class="govuk-body">People adopt new tools at different rates. We focus on supporting those ready to try them, as their success often encourages others.</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-adoption-heading-2">
-          My team has some experience with AI coding tools
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-adoption-content-2" class="govuk-accordion__section-content">
-      <p class="govuk-body">If your teams have started using tools but need to build confidence and embed new ways of working, we'll provide structured support.</p>
-              <p class="govuk-body">The journey typically involves the following steps.</p>
-              <h3 class="govuk-heading-s">1. Register your interest</h3>
-              <p class="govuk-body">Once you've registered your interest, we'll arrange an initial conversation to understand what's already in place, what you're trying to achieve, and whether AI Engineering Lab is the right fit. This typically takes a few days to 2 weeks.</p>
-              <h3 class="govuk-heading-s">2. Identify your organisation's needs</h3>
-              <p class="govuk-body">We'll discuss your current setup, your goals, your constraints, and identify who will champion adoption. At the end, you'll have an adoption plan setting out what will happen, when, and how we'll measure success.</p>
-              <h3 class="govuk-heading-s">3. Build skills and new ways of working</h3>
-              <p class="govuk-body">We offer coaching to senior leaders and sponsors on our change management framework. We'll identify and develop champions who will drive adoption and provide support using our change management framework. Your teams will build skills through workshops and self-paced materials, and apply tools to real problems and challenges. We'll use clear metrics to show whether adoption is delivering value.</p>
-              <h3 class="govuk-heading-s">4. Embed and grow capability</h3>
-              <p class="govuk-body">Our direct support is time-limited, but adoption continues, sustained by champions internally, ongoing community connection, and resources available through the best practice repository. As new people join or adoption expands, they benefit from what's already in place.</p>
-              <p class="govuk-body">You'll move on when champions are confident, teams have embedded new ways of working, and usage metrics show sustained adoption.</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-adoption-heading-3">
-          My team is confident using AI coding tools
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-adoption-content-3" class="govuk-accordion__section-content">
-      <p class="govuk-body">If your teams are already using AI coding tools confidently, we can help you build on what's working, connect you to the wider community, and access best practice resources.</p>
-              <p class="govuk-body">To discuss how we can support your next stage, email <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a></p>
-              <p class="govuk-body">We aim to respond within 2 working days.</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-adoption-heading-4">
-          Register your interest
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-adoption-content-4" class="govuk-accordion__section-content">
-      <p class="govuk-body">To register your interest, email <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>.</p>
-              <p class="govuk-body">You should provide information about:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
-                <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
-                <li>the size of your engineering team and a brief description of the work they're doing</li>
-                <li>your team's capacity to work with AI Engineering Lab over the next month</li>
-              </ul>
-    </div>
-  </div>
-</div>
+      <div class="app-prose-scope"><p class="govuk-body">AI coding tools support engineers in their day-to-day work. They help with routine tasks so engineers can focus on the work that matters most.</p>
+<p class="govuk-body">The UK government supports safe, sustainable AI adoption as part of its blueprint for improving public services through responsible use of technology. AI Engineering Lab is part of this effort, providing support to departments adopting AI tools.</p>
+<h2 id="how-ai-tools-can-help" tabindex="-1" class="govuk-heading-l">How AI tools can help</h2>
+<p class="govuk-body">AI tools can support a wide range of everyday engineering tasks, including:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>writing and improving code</li>
+<li>understanding unfamiliar code</li>
+<li>generating documentation</li>
+<li>debugging and troubleshooting</li>
+</ul>
+<p class="govuk-body">In each of these tasks, the engineer remains in control. AI tools support the work rather than making decisions. Human reviews are an essential part of the process.</p>
+<h2 id="explore-how-ai-tools-can-help-your-team" tabindex="-1" class="govuk-heading-l">Explore how AI tools can help your team</h2>
+<p class="govuk-body">AI Engineering Lab can support your team at every stage of the adoption journey.</p>
+<p class="govuk-body"><a href="/aiengineeringlab_signpost/explore/how-to-adopt-ai-tools/" class="govuk-link">Find out how to adopt AI tools</a>.</p>
+<h2 class="govuk-heading-l">Register your interest</h2>
+<p class="govuk-body">
+  To register your interest, email
+  <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>
+</p>
+<p class="govuk-body">You should provide information about:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
+  <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+  <li>the size of your engineering team and a brief description of the work they're doing</li>
+  <li>your team's capacity to work with AI Engineering Lab over the next month</li>
+</ul>
 </div>
 
 
@@ -422,29 +380,6 @@ Roles
 
     <div class="govuk-footer__meta">
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-          <h2 class="govuk-visually-hidden">Support links</h2>
-            <ul class="govuk-footer__inline-list">
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="https://www.gov.uk/help/privacy">
-                    Privacy
-                  </a>
-                </li>
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="https://www.gov.uk/help/cookies">
-                    Cookies
-                  </a>
-                </li>
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="https://www.gov.uk/contact">
-                    Contact
-                  </a>
-                </li>
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="https://www.gov.uk/help/accessibility-statement">
-                    Accessibility statement
-                  </a>
-                </li>
-            </ul>
 <svg class="govuk-footer__licence-logo" aria-hidden="true" focusable="false" height="17" width="41" viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">
   <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
 </svg>

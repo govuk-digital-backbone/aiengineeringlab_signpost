@@ -1,6 +1,6 @@
 ---
 layout: ../_includes/custom-page.njk
-title: What AI tools can do
+title: What AI coding tools can do
 ---
 
 AI coding tools support engineers in their day-to-day work. They help with routine tasks so engineers can focus on the work that matters most.

@@ -1,6 +1,6 @@
 ---
 layout: ../_includes/custom-page.njk
-title: How to adopt AI tools
+title: How to adopt AI coding tools
 ---
 
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
