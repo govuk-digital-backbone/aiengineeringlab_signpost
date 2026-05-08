@@ -45,7 +45,7 @@ title: Explore AI Engineering Lab
   }
 </style>
 
-<p class="govuk-body-l">AI Engineering Lab is a Government Digital Service (GDS) initiative to drive AI tooling adoption across public sector software engineering teams. AI Engineering Lab provides technical tooling implementation, training, and end-to-end support.</p>
+<p class="govuk-body-l">AI Engineering Lab is a Government Digital Service (GDS) initiative to drive AI coding tools adoption across public sector software engineering teams. AI Engineering Lab provides technical tooling implementation, training, and end-to-end support.</p>
 
 ## Explore
 
@@ -55,15 +55,15 @@ title: Explore AI Engineering Lab
   <div class="dfe-card">
     <div class="dfe-card-container">
       <h3 class="govuk-heading-m">
-        <a href="/explore/what-ai-tools-can-do/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What AI tools can do</a>
+        <a href="/explore/what-ai-coding-tools-can-do/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What AI coding tools can do</a>
       </h3>
-      <p class="govuk-body">Explore what AI tooling can do, and how it could help your team.</p>
+      <p class="govuk-body">Explore what AI coding tools can do, and how it could help your team.</p>
     </div>
   </div>
   <div class="dfe-card">
     <div class="dfe-card-container">
       <h3 class="govuk-heading-m">
-        <a href="/explore/how-to-adopt-ai-tools/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">How to adopt AI tools</a>
+        <a href="/explore/how-to-adopt-ai-coding-tools/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">How to adopt AI coding tools</a>
       </h3>
       <p class="govuk-body">Learn how we can help guide your team through the adoption process.</p>
     </div>
@@ -120,7 +120,7 @@ title: Explore AI Engineering Lab
       <h3 class="govuk-heading-m">
         <a href="/roles/senior-leaders/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Senior leaders and decision-makers</a>
       </h3>
-      <p class="govuk-body">Understand what's involved in rolling out AI coding tools in your department.</p>
+      <p class="govuk-body">Understand what's involved in rolling out AI coding tools in your organisation.</p>
     </div>
   </div>
   <div class="dfe-card">
@@ -136,7 +136,7 @@ title: Explore AI Engineering Lab
       <h3 class="govuk-heading-m">
         <a href="/roles/software-engineers/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Software engineers</a>
       </h3>
-      <p class="govuk-body">Best practice guidance, training and code examples for AI coding tools.</p>
+      <p class="govuk-body">Guidance, training and code examples for AI coding tools.</p>
     </div>
   </div>
   <div class="dfe-card">
@@ -144,7 +144,7 @@ title: Explore AI Engineering Lab
       <h3 class="govuk-heading-m">
         <a href="/roles/sponsors/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Sponsors</a>
       </h3>
-      <p class="govuk-body">Shape the conditions for successful AI coding tool adoption in your organisation.</p>
+      <p class="govuk-body">Shape the conditions for successful AI coding tools adoption in your organisation.</p>
     </div>
   </div>
   <div class="dfe-card">

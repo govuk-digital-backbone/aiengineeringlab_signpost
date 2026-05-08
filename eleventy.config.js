@@ -13,20 +13,9 @@ export default function (eleventyConfig) {
         { text: "Roles", href: "/roles/" },
       ],
     },
-    footer: {
-      meta: {
-        items: [
-          { text: "Privacy", href: "https://www.gov.uk/help/privacy" },
-          { text: "Cookies", href: "https://www.gov.uk/help/cookies" },
-          { text: "Contact", href: "https://www.gov.uk/contact" },
-          {
-            text: "Accessibility statement",
-            href: "https://www.gov.uk/help/accessibility-statement",
-          },
-        ],
-      },
-    },
   });
+
+  eleventyConfig.addPassthroughCopy("app/assets/custom.css");
 
   return {
     dataTemplateEngine: "njk",
