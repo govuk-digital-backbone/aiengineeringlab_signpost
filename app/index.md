@@ -55,7 +55,7 @@ title: Explore AI Engineering Lab
   <div class="dfe-card">
     <div class="dfe-card-container">
       <h3 class="govuk-heading-m">
-        <a href="/explore/what-ai-tools-can-do/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What AI tools can do</a>
+        <a href="/explore/what-ai-coding-tools-can-do/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What AI coding tools can do</a>
       </h3>
       <p class="govuk-body">Explore what AI tooling can do, and how it could help your team.</p>
     </div>

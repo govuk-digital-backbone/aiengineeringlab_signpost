@@ -8,7 +8,7 @@ describe("Layout and Navigation", () => {
     "app/explore/how-to-adopt-ai-tools.md",
     "app/explore/getting-started.md",
     "app/explore/contact-us.md",
-    "app/explore/what-ai-tools-can-do.md",
+    "app/explore/what-ai-coding-tools-can-do.md",
     "app/explore/repository.md",
     "app/roles/software-engineers.md",
     "app/roles/delivery-teams.md",
