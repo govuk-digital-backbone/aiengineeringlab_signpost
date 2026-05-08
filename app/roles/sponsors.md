@@ -11,7 +11,7 @@ title: Sponsors
 
 <ul class="govuk-list govuk-list--bullet">
   <li>make a case for why this change matters, and communicate it consistently</li>
-  <li>build a coalition of support through early engagement with technical leads, security teams and delivery managers</li>
+  <li>build support through early engagement with technical leads, security teams and delivery managers</li>
   <li>ensure that engineers and <a href="/roles/champions/" class="govuk-link">AI champions</a> have time to learn and experiment</li>
   <li>remove organisational barriers that your <a href="/roles/champions/" class="govuk-link">AI champion</a> cannot address alone</li>
   <li>embed new ways of working into systems, processes, and culture over time</li>
@@ -56,7 +56,7 @@ title: Sponsors
       content: { html: "
         <p class='govuk-body'>The Knowledge Hub is where you'll find change management resources, community support and peer learning opportunities. You need a government or public sector email address to sign up.</p>
         <p class='govuk-body'><a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link' target='_blank' rel='noopener noreferrer'>Sign up to the Knowledge Hub</a>.</p>
-        <p class='govuk-body'>The AI Engineering Lab repository is a central hub for reusable guidance, templates, training materials, and practices for safely and effectively adopting AI coding assistants.</p>
+        <p class='govuk-body'>The AI Engineering Lab repository is the main source of guidance, templates and training materials for safely and effectively adopting AI coding tools.</p>
         <p class='govuk-body'><a href='https://github.com/govuk-digital-backbone/aiengineeringlab' class='govuk-link' target='_blank' rel='noopener noreferrer'>Visit the AI Engineering Lab repository on GitHub</a>.</p>
       " }
     },
@@ -68,7 +68,7 @@ title: Sponsors
         <ul class='govuk-list govuk-list--bullet'>
           <li>your organisation and the engineering teams you are responsible for</li>
           <li>your reason for wanting to engage with AI Engineering Lab</li>
-          <li>the level of AI tool adoption already underway in your organisation, if any</li>
+          <li>the level of AI coding tools adoption already underway in your organisation, if any</li>
           <li>any other existing commitments or constraints that would affect your availability</li>
         </ul>
       " }

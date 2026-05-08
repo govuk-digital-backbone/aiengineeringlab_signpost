@@ -263,6 +263,7 @@ Roles
       var summary = document.createElement('summary');
       summary.className = 'app-nav-dropdown__button';
       summary.setAttribute('aria-expanded', 'false');
+
       var labelTextNode = document.createTextNode(label + ' ');
       summary.appendChild(labelTextNode);
 
@@ -278,7 +279,7 @@ Roles
       svg.appendChild(path);
 
       summary.appendChild(svg);
-      
+
       var ul = document.createElement('ul');
       ul.className = 'app-nav-dropdown__content';
 

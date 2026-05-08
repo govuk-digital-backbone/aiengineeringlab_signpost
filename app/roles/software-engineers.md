@@ -5,7 +5,7 @@ title: Software engineers
 
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
-<p class="govuk-body">If you’re a software engineer in the public sector, the AI Engineering Lab repository provides reusable guidance, templates, training materials, and best practices for safely and effectively adopting AI code assistants.</p>
+<p class="govuk-body">If you’re a software engineer in the public sector, the AI Engineering Lab repository provides reusable guidance, templates, training materials, and guidance for safely and effectively adopting AI coding tools.</p>
 
 <p class="govuk-body">You'll find: </p>
 
@@ -31,7 +31,7 @@ title: Software engineers
         <h3 class='govuk-heading-s'>Workshops and hands-on sessions</h3>
         <p class='govuk-body'>Join facilitated workshops where you'll work on real problems with support from experienced engineers.</p>
         <h3 class='govuk-heading-s'>Hackathons and coding challenges</h3>
-        <p class='govuk-body'>Take part in hands-on coding events where you'll practice using AI tools in realistic scenarios, working through common challenges in a supported environment.</p>
+        <p class='govuk-body'>Take part in hands-on coding events where you'll practice using AI coding tools in realistic scenarios, working through common challenges in a supported environment.</p>
         <h3 class='govuk-heading-s'>Community and showcases</h3>
         <p class='govuk-body'>Connect with engineers across government, join monthly showcases, and become a champion in your department.</p>
       " }
@@ -55,8 +55,8 @@ title: Software engineers
         <p class='govuk-body'>To register your interest, email <a href='mailto:gdsengineeringexcellence@dsit.gov.uk' class='govuk-link'>gdsengineeringexcellence@dsit.gov.uk</a>.</p>
         <p class='govuk-body'>You should provide information about:</p>
         <ul class='govuk-list govuk-list--bullet'>
-          <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
-          <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+          <li>your reason for wanting to work with us, such as implementing tooling within your team</li>
+          <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licences</li>
           <li>the size of your engineering team and a brief description of the work they're doing</li>
           <li>your team's capacity to work with AI Engineering Lab over the next month</li>
         </ul>
