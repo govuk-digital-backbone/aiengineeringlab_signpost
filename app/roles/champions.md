@@ -41,8 +41,8 @@ title: Champions
           <li>implementation tools and guidance for engineers and managers</li>
           <li>security and compliance resources</li>
         </ul>
-        <p class='govuk-body'>You will also receive training on our recommend change management model, resources, and access to the community of champions on <a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link'>Knowledge Hub</a>.</p>
-        <p class='govuk-body'>For more complex technical challenges, we also provide escalation support, including access to our forward deployed engineers.</p>
+        <p class='govuk-body'>You will also receive training on our recommended change management framework, resources, and access to the community of champions on <a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link'>Knowledge Hub</a>.</p>
+        <p class='govuk-body'>For more complex technical challenges, we also provide access to our forward deployed engineers.</p>
       " }
     },
     {
@@ -62,7 +62,7 @@ title: Champions
       heading: { text: "Measuring impact in your organisation" },
       content: { html: "
         <p class='govuk-body'>Gathering evidence of how AI coding tools are being used can help secure continued support in your department.</p>
-        <p class='govuk-body'>Our <a href='/explore/repository/' class='govuk-link'>AI Engineering Lab repository</a> includes tools and guidance to help with:</p>
+        <p class='govuk-body'>Our <a href='https://github.com/govuk-digital-backbone/aiengineeringlab' class='govuk-link'>AI Engineering Lab repository</a> includes tools and guidance to help with:</p>
         <ul class='govuk-list govuk-list--bullet'>
           <li>selecting appropriate metrics</li>
           <li>data collection methods</li>
@@ -75,11 +75,11 @@ title: Champions
       heading: { text: "Influencing senior leaders and decision-makers" },
       content: { html: "
         <p class='govuk-body'>Champions may need to support the business case for adopting AI coding tools and advocate for extra resources and support.</p>
-        <p class='govuk-body'>The resources in our <a href='/explore/repository/' class='govuk-link'>AI Engineering Lab repository</a> include:</p>
+        <p class='govuk-body'>The resources in our <a href='https://github.com/govuk-digital-backbone/aiengineeringlab' class='govuk-link'>AI Engineering Lab repository</a> include:</p>
         <ul class='govuk-list govuk-list--bullet'>
           <li>materials for making business cases to senior leaders</li>
           <li>guidance on presenting evidence</li>
-          <li>strategies for engaging leaders in your organisation</li>
+          <li>advice on engaging leaders in your organisation</li>
           <li>practical advice and real examples from other champions</li>
         </ul>
       " }
@@ -87,7 +87,7 @@ title: Champions
     {
       heading: { text: "Champion community and peer support" },
       content: { html: "
-        <p class='govuk-body'>As a champion, you'll have the opportunity to join a growing network of AI coding champions across government, with access to peer support and community events.</p>
+        <p class='govuk-body'>As a champion, you'll have the opportunity to join a growing network of AI champions across government, with access to peer support and community events.</p>
         <p class='govuk-body'>Through the Knowledge Hub you can:</p>
         <ul class='govuk-list govuk-list--bullet'>
           <li>learn about our recommended change management framework and access resources</li>

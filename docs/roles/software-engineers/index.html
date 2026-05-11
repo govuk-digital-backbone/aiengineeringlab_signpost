@@ -263,7 +263,22 @@ Explore
       var summary = document.createElement('summary');
       summary.className = 'app-nav-dropdown__button';
       summary.setAttribute('aria-expanded', 'false');
-      summary.innerHTML = label + ' <svg class="app-nav-dropdown__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"><path d="M7 9.5L1.5 4h11L7 9.5z"/></svg>';
+
+      var labelTextNode = document.createTextNode(label + ' ');
+      summary.appendChild(labelTextNode);
+
+      var svgNS = 'http://www.w3.org/2000/svg';
+      var svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('class', 'app-nav-dropdown__arrow');
+      svg.setAttribute('xmlns', svgNS);
+      svg.setAttribute('viewBox', '0 0 14 14');
+      svg.setAttribute('fill', 'currentColor');
+
+      var path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('d', 'M7 9.5L1.5 4h11L7 9.5z');
+      svg.appendChild(path);
+
+      summary.appendChild(svg);
 
       var ul = document.createElement('ul');
       ul.className = 'app-nav-dropdown__content';
@@ -312,7 +327,7 @@ Explore
 
 
 
-      <div class="app-prose-scope"><p class="govuk-body">If you’re a software engineer in the public sector, the AI Engineering Lab repository provides reusable guidance, templates, training materials, and best practices for safely and effectively adopting AI code assistants.</p>
+      <div class="app-prose-scope"><p class="govuk-body">If you’re a software engineer in the public sector, the AI Engineering Lab repository provides reusable guidance, templates, training materials, and guidance for safely and effectively adopting AI coding tools.</p>
 <p class="govuk-body">You'll find: </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>guides to get you started with different AI coding tools </li>
@@ -338,7 +353,7 @@ Explore
               <h3 class="govuk-heading-s">Workshops and hands-on sessions</h3>
               <p class="govuk-body">Join facilitated workshops where you'll work on real problems with support from experienced engineers.</p>
               <h3 class="govuk-heading-s">Hackathons and coding challenges</h3>
-              <p class="govuk-body">Take part in hands-on coding events where you'll practice using AI tools in realistic scenarios, working through common challenges in a supported environment.</p>
+              <p class="govuk-body">Take part in hands-on coding events where you'll practice using AI coding tools in realistic scenarios, working through common challenges in a supported environment.</p>
               <h3 class="govuk-heading-s">Community and showcases</h3>
               <p class="govuk-body">Connect with engineers across government, join monthly showcases, and become a champion in your department.</p>
     </div>
@@ -374,8 +389,8 @@ Explore
       <p class="govuk-body">To register your interest, email <a href="mailto:gdsengineeringexcellence@dsit.gov.uk" class="govuk-link">gdsengineeringexcellence@dsit.gov.uk</a>.</p>
               <p class="govuk-body">You should provide information about:</p>
               <ul class="govuk-list govuk-list--bullet">
-                <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
-                <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+                <li>your reason for wanting to work with us, such as implementing tooling within your team</li>
+                <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licences</li>
                 <li>the size of your engineering team and a brief description of the work they're doing</li>
                 <li>your team's capacity to work with AI Engineering Lab over the next month</li>
               </ul>
