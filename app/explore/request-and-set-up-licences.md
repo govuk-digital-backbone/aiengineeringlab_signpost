@@ -15,11 +15,12 @@ title: Getting started with your licences
       content: { html: "
         <p class='govuk-body'>Your team should have:</p>
         <ul class='govuk-list govuk-list--bullet'>
-          <li>a clear use case for using AI coding tools</li>
-          <li>time and capacity to test and adopt the tooling</li>
-          <li>agreement within your organisation to use AI coding tools</li>
-          <li>approval from your cyber security team to request licences</li>
-          <li>a sponsor</li>
+          <li>have a clear use case for using AI tools</li>
+          <li>have time and capacity to test and adopt the tooling</li>
+          <li>start <a href='https://github.com/govuk-digital-backbone/aiengineeringlab/blob/228a660ac98788167b0382624ef7b80dfb58d84f/quality-metrics/baseline-metrics-guidance.md' class='govuk-link' target='_blank' rel='noopener noreferrer'>collecting baseline data</a> that will help you demonstrate the value of the tools</li>
+          <li>have agreement within your organisation to use AI tools</li>
+          <li>have approval from your cyber security team to request licences</li>
+          <li>have a sponsor</li>
         </ul>
         <h3 class='govuk-heading-s'>Identify a sponsor</h3>
         <p class='govuk-body'>You must have a sponsor before requesting licences.</p>
