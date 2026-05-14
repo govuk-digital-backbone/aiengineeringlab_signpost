@@ -22,7 +22,7 @@ In each of these tasks, the engineer remains in control. AI coding tools support
 
 AI Engineering Lab can support your team at every stage of the adoption journey.
 
-<a href="/explore/how-to-adopt-ai-tools/" class="govuk-link">Find out how to adopt AI coding tools</a>.
+<a href="/explore/how-to-adopt-ai-coding-tools/" class="govuk-link">Find out how to adopt AI coding tools</a>.
 
 <h2 class="govuk-heading-l">Register your interest</h2>
 
