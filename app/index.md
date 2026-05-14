@@ -71,7 +71,7 @@ title: Explore AI Engineering Lab
   <div class="dfe-card">
     <div class="dfe-card-container">
       <h3 class="govuk-heading-m">
-        <a href="/explore/getting-started/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Request and set up licences</a>
+        <a href="/explore/request-and-set-up-licences/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Request and set up licences</a>
       </h3>
       <p class="govuk-body">Find out if you're eligible, how to request a licence and how to get set up.</p>
     </div>
