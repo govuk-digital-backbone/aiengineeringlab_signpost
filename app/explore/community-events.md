@@ -29,20 +29,6 @@ title: Community events
       " }
     },
     {
-      heading: { text: "Upcoming hackathon (16 April 2026)" },
-      content: { html: "
-        <p class='govuk-body'><a href='https://forms.office.com/pages/responsepage.aspx?id=BXCsy8EC60O0l-ZJLRst2B_Gsfy5Zv9CpxUYtrs7SxxUMTdEUjNUOElKSUxIMlNYSkQ1SzRPRUtXTi4u&route=shorturl' class='govuk-link' target='_blank' rel='noopener noreferrer'>Register here</a> (registration closes on 1 April 2026) to join our in-person hackathon on 16 April 2026 in London. You'll spend the day:</p>
-        <ul class='govuk-list govuk-list--bullet'>
-          <li>working with your AI coding tool on a real problem</li>
-          <li>collaborating with engineers from other organisations</li>
-          <li>getting support from technical leads and champions</li>
-          <li>connecting with the AI Engineering Lab community</li>
-        </ul>
-        <p class='govuk-body'>The hackathon will take place from 9am to 5pm at:</p>
-        <p class='govuk-body'>CodeNode<br>10 South Place<br>London<br>EC2M 7EB</p>
-      " }
-    },
-    {
       heading: { text: "Show and tells" },
       content: { html: "
         <p class='govuk-body'>Participating teams share their adoption journeys, challenges and successes at cross-government show and tell sessions.</p>
@@ -63,11 +49,11 @@ title: Community events
         <p class='govuk-body'>Lunch and learns are structured sessions covering:</p>
         <ul class='govuk-list govuk-list--bullet'>
           <li>basic and advanced AI tool techniques</li>
-          <li>best practices</li>
+          <li>guidance on effective techniques</li>
           <li>security and safe usage</li>
           <li>role-specific guidance for different types of work</li>
         </ul>
-        <p class='govuk-body'>Tech drop-ins are informal sessions where you can bring your questions and get direct support from AI-trained engineers.</p>
+        <p class='govuk-body'>Tech drop-ins are informal sessions where you can bring your questions and get direct support from engineers experienced with AI coding tools.</p>
       " }
     },
     {
@@ -84,8 +70,8 @@ title: Community events
         <p class='govuk-body'>To register your interest, email <a href='mailto:gdsengineeringexcellence@dsit.gov.uk' class='govuk-link'>gdsengineeringexcellence@dsit.gov.uk</a>.</p>
         <p class='govuk-body'>You should provide information about:</p>
         <ul class='govuk-list govuk-list--bullet'>
-          <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
-          <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+          <li>your reason for wanting to work with us, such as implementing tooling within your team</li>
+          <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licences</li>
           <li>the size of your engineering team and a brief description of the work they're doing</li>
           <li>your team's capacity to work with AI Engineering Lab over the next month</li>
         </ul>

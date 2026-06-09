@@ -14,7 +14,7 @@ title: Change management resources to support your team
   <li>ensures individual actions and organisational support progress at the same pace</li>
 </ul>
 
-<p class="govuk-body">Our change leads work with AI champions and sponsors to provide personalised support at each stage of the adoption journey.</p>
+<p class="govuk-body">Our change leads work with AI champions and sponsors to provide tailored support at each stage of the adoption journey.</p>
 
 <h2 class="govuk-heading-l">Explore the Knowledge Hub</h2>
 
@@ -38,8 +38,8 @@ title: Change management resources to support your team
 </p>
 <p class="govuk-body">You should provide information about:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
-  <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+  <li>your reason for wanting to work with us, such as implementing tooling within your team</li>
+  <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licences</li>
   <li>the size of your engineering team and a brief description of the work they're doing</li>
   <li>your team's capacity to work with AI Engineering Lab over the next month</li>
 </ul>

@@ -145,9 +145,9 @@
 
     var dropdownData = {
       'Explore': [
-        { text: 'What AI tools can do', href: '{{ "/explore/what-ai-tools-can-do/" | url }}' },
-        { text: 'How to adopt AI tools', href: '{{ "/explore/how-to-adopt-ai-tools/" | url }}' },
-        { text: 'Getting started with your licenses', href: '{{ "/explore/getting-started/" | url }}' },
+        { text: 'What AI coding tools can do', href: '{{ "/explore/what-ai-coding-tools-can-do/" | url }}' },
+        { text: 'How to adopt AI coding tools', href: '{{ "/explore/how-to-adopt-ai-coding-tools/" | url }}' },
+        { text: 'Request and set up licences', href: '{{ "/explore/request-and-set-up-licences/" | url }}' },
         { text: 'Change management resources', href: '{{ "/explore/change-management/" | url }}' },
         { text: 'AI Engineering Lab repository', href: "https://github.com/govuk-digital-backbone/aiengineeringlab", external: true },
         { text: 'Community events', href: '{{ "/explore/community-events/" | url }}' },
@@ -157,6 +157,7 @@
         { text: 'Senior leaders and decision-makers', href: '{{ "/roles/senior-leaders/" | url }}' },
         { text: 'Champions', href: '{{ "/roles/champions/" | url }}' },
         { text: 'Software engineers', href: '{{ "/roles/software-engineers/" | url }}' },
+        { text: 'Sponsors', href: '{{ "/roles/sponsors/" | url }}' },
         { text: 'Delivery teams', href: '{{ "/roles/delivery-teams/" | url }}' }
       ]
     };
@@ -174,7 +175,22 @@
       var summary = document.createElement('summary');
       summary.className = 'app-nav-dropdown__button';
       summary.setAttribute('aria-expanded', 'false');
-      summary.innerHTML = label + ' <svg class="app-nav-dropdown__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"><path d="M7 9.5L1.5 4h11L7 9.5z"/></svg>';
+
+      var labelTextNode = document.createTextNode(label + ' ');
+      summary.appendChild(labelTextNode);
+
+      var svgNS = 'http://www.w3.org/2000/svg';
+      var svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('class', 'app-nav-dropdown__arrow');
+      svg.setAttribute('xmlns', svgNS);
+      svg.setAttribute('viewBox', '0 0 14 14');
+      svg.setAttribute('fill', 'currentColor');
+
+      var path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('d', 'M7 9.5L1.5 4h11L7 9.5z');
+      svg.appendChild(path);
+
+      summary.appendChild(svg);
 
       var ul = document.createElement('ul');
       ul.className = 'app-nav-dropdown__content';

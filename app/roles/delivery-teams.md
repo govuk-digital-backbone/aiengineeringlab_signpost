@@ -7,7 +7,7 @@ title: Delivery teams
 
 <p class="govuk-body">AI Engineering Lab is a UK government programme designed to help public sector departments adopt AI coding tools safely and effectively.</p>
 
-<p class="govuk-body">We work with engineering teams to provide tooling implementation, training, best practice guidance, and change management support.</p>
+<p class="govuk-body">We work with engineering teams to provide AI coding tools implementation, training, guidance, and change management support.</p>
 
 {{ govukAccordion({
   id: "accordion-delivery-teams",
@@ -24,7 +24,7 @@ title: Delivery teams
           <li>new considerations for code review and quality assurance</li>
           <li>different patterns in team capacity and velocity</li>
         </ul>
-        <p class='govuk-body'><a href='/explore/how-to-adopt-ai-tools/' class='govuk-link'>Understand the adoption journey</a>.</p>
+        <p class='govuk-body'><a href='/explore/how-to-adopt-ai-coding-tools/' class='govuk-link'>Understand the adoption journey</a>.</p>
       " }
     },
     {
@@ -38,7 +38,7 @@ title: Delivery teams
           <li>support engineers through the change</li>
           <li>measure whether adoption is delivering value</li>
         </ul>
-        <p class='govuk-body'><a href='/explore/change-management/' class='govuk-link'>Find out about our people-led change approach</a>.</p>
+        <p class='govuk-body'><a href='/explore/change-management/' class='govuk-link'>Find out about our people-led approach</a>.</p>
         <p class='govuk-body'>You can access change management resources, connect with delivery managers and peers in other departments, and join community events through the Knowledge Hub. You need a government or public sector email address to sign up. Personal email addresses are not accepted.</p>
         <p class='govuk-body'><a href='https://khub.net/group/ai-engineering-lab/group-home' class='govuk-link' target='_blank' rel='noopener noreferrer'>Access the Knowledge Hub</a>.</p>
       " }
@@ -49,8 +49,8 @@ title: Delivery teams
         <p class='govuk-body'>To register your interest, email <a href='mailto:gdsengineeringexcellence@dsit.gov.uk' class='govuk-link'>gdsengineeringexcellence@dsit.gov.uk</a>.</p>
         <p class='govuk-body'>You should provide information about:</p>
         <ul class='govuk-list govuk-list--bullet'>
-          <li>your reason for wanted to work with us, such as implementing tooling within your team</li>
-          <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licenses</li>
+          <li>your reason for wanting to work with us, such as implementing tooling within your team</li>
+          <li>what AI Engineering Lab can support you with, such as knowledge-sharing, adoption support, and AI licences</li>
           <li>the size of your engineering team and a brief description of the work they're doing</li>
           <li>your team's capacity to work with AI Engineering Lab over the next month</li>
         </ul>
