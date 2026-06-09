@@ -2,7 +2,6 @@ import { govukEleventyPlugin } from "@x-govuk/govuk-eleventy-plugin";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(govukEleventyPlugin, {
-    googleAnalyticsId: process.env.GA_MEASUREMENT_ID || "",
     header: {
       serviceName: "AI Engineering Lab",
       serviceUrl: "/",

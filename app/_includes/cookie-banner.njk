@@ -1,4 +1,3 @@
-{% if options.googleAnalyticsId %}
 <div class="govuk-cookie-banner" data-nosnippet role="region" aria-label="Cookies on AI Engineering Lab" id="cookie-banner">
 
   <div class="govuk-cookie-banner__message govuk-width-container" id="cookie-banner-message">
@@ -47,7 +46,7 @@
 
 <script>
   (function () {
-    var GA_ID = window.GA_ID || '{{ options.googleAnalyticsId }}';
+    var GTM_ID = 'GTM-5SMKQ7QN';
     var COOKIE_NAME = 'analytics_consent';
     var COOKIE_EXPIRY_DAYS = 365;
 
@@ -62,24 +61,28 @@
         '; expires=' + expires + '; path=/; SameSite=Lax; Secure';
     }
 
-    function loadGA() {
-      if (window._gaLoaded) return;
-      window._gaLoaded = true;
-      // Enable GA via the disable flag before loading the script
-      window['ga-disable-' + GA_ID] = false;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', GA_ID, { anonymize_ip: true, cookie_flags: 'SameSite=None;Secure' });
-    }
+    function loadGTM() {
+      if (window._gtmLoaded) return;
+      window._gtmLoaded = true;
 
-    function disableGA() {
-      window['ga-disable-' + GA_ID] = true;
+      // GTM head script
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',GTM_ID);
+
+      // GTM noscript fallback
+      var noscript = document.createElement('noscript');
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.googletagmanager.com/ns.html?id=' + GTM_ID;
+      iframe.height = '0';
+      iframe.width = '0';
+      iframe.style.display = 'none';
+      iframe.style.visibility = 'hidden';
+      noscript.appendChild(iframe);
+      document.body.insertBefore(noscript, document.body.firstChild);
+      console.log('GTM loaded');
     }
 
     function hideBanner() {
@@ -97,10 +100,10 @@
       if (el) el.hidden = true;
     }
 
-    // If already consented, load GA and hide banner immediately
+    // If already consented, load GTM and hide banner immediately
     var consent = getCookie(COOKIE_NAME);
     if (consent === 'accepted') {
-      loadGA();
+      loadGTM();
       hideBanner();
     } else if (consent === 'rejected') {
       hideBanner();
@@ -109,14 +112,13 @@
     document.addEventListener('click', function (e) {
       if (e.target && e.target.hasAttribute('data-accept-cookies')) {
         setCookie(COOKIE_NAME, 'accepted', COOKIE_EXPIRY_DAYS);
-        loadGA();
+        loadGTM();
         hideMessage('cookie-banner-message');
         showMessage('cookie-banner-accepted');
       }
 
       if (e.target && e.target.hasAttribute('data-reject-cookies')) {
         setCookie(COOKIE_NAME, 'rejected', COOKIE_EXPIRY_DAYS);
-        disableGA();
         hideMessage('cookie-banner-message');
         showMessage('cookie-banner-rejected');
       }
@@ -127,4 +129,3 @@
     });
   })();
 </script>
-{% endif %}

@@ -15,7 +15,7 @@ function setupDOM() {
   `;
 }
 
-function createConsentManager(GA_ID, getDocumentCookie, setDocumentCookie) {
+function createConsentManager(getDocumentCookie, setDocumentCookie) {
   const COOKIE_NAME = "analytics_consent";
   const COOKIE_EXPIRY_DAYS = 365;
 
@@ -39,20 +39,12 @@ function createConsentManager(GA_ID, getDocumentCookie, setDocumentCookie) {
   }
 
   const state = {
-    gaLoaded: false,
-    gaDisabled: true,
+    gtmLoaded: false,
   };
 
-  function loadGA() {
-    if (state.gaLoaded) return;
-    state.gaLoaded = true;
-    state.gaDisabled = false;
-    window["ga-disable-" + GA_ID] = false;
-  }
-
-  function disableGA() {
-    state.gaDisabled = true;
-    window["ga-disable-" + GA_ID] = true;
+  function loadGTM() {
+    if (state.gtmLoaded) return;
+    state.gtmLoaded = true;
   }
 
   function hideBanner() {
@@ -73,7 +65,7 @@ function createConsentManager(GA_ID, getDocumentCookie, setDocumentCookie) {
   function init() {
     const consent = getCookie(COOKIE_NAME);
     if (consent === "accepted") {
-      loadGA();
+      loadGTM();
       hideBanner();
     } else if (consent === "rejected") {
       hideBanner();
@@ -82,13 +74,12 @@ function createConsentManager(GA_ID, getDocumentCookie, setDocumentCookie) {
     document.addEventListener("click", function (e) {
       if (e.target && e.target.hasAttribute("data-accept-cookies")) {
         setCookie(COOKIE_NAME, "accepted", COOKIE_EXPIRY_DAYS);
-        loadGA();
+        loadGTM();
         hideMessage("cookie-banner-message");
         showMessage("cookie-banner-accepted");
       }
       if (e.target && e.target.hasAttribute("data-reject-cookies")) {
         setCookie(COOKIE_NAME, "rejected", COOKIE_EXPIRY_DAYS);
-        disableGA();
         hideMessage("cookie-banner-message");
         showMessage("cookie-banner-rejected");
       }
@@ -98,59 +89,48 @@ function createConsentManager(GA_ID, getDocumentCookie, setDocumentCookie) {
     });
   }
 
-  return { init, state, getCookie, loadGA, disableGA };
+  return { init, state, getCookie, loadGTM };
 }
-
-const GA_ID = "G-TEST123";
 
 beforeEach(() => {
   setupDOM();
-  window["ga-disable-" + GA_ID] = true;
   document.body.replaceWith(document.body.cloneNode(true));
   setupDOM();
 });
 
-describe("GA disabled by default on page load", () => {
-  test("ga-disable flag starts as true", () => {
-    expect(window["ga-disable-" + GA_ID]).toBe(true);
-  });
-
-  test("GA is not loaded when no consent cookie exists", () => {
+describe("GTM not loaded by default", () => {
+  test("GTM is not loaded when no consent cookie exists", () => {
     let cookies = "";
-    const manager = createConsentManager(GA_ID, () => cookies, () => {});
+    const manager = createConsentManager(() => cookies, () => {});
     manager.init();
-    expect(manager.state.gaLoaded).toBe(false);
-    expect(window["ga-disable-" + GA_ID]).toBe(true);
+    expect(manager.state.gtmLoaded).toBe(false);
   });
 });
 
 describe("Returning visitor — consent already accepted", () => {
-  test("GA loads and banner hides if analytics_consent=accepted cookie is set", () => {
+  test("GTM loads and banner hides if analytics_consent=accepted cookie is set", () => {
     const cookies = "analytics_consent=accepted";
-    const manager = createConsentManager(GA_ID, () => cookies, () => {});
+    const manager = createConsentManager(() => cookies, () => {});
     manager.init();
-    expect(manager.state.gaLoaded).toBe(true);
-    expect(window["ga-disable-" + GA_ID]).toBe(false);
+    expect(manager.state.gtmLoaded).toBe(true);
     expect(document.getElementById("cookie-banner").hidden).toBe(true);
   });
 });
 
 describe("Returning visitor — consent already rejected", () => {
-  test("GA does not load and banner hides if analytics_consent=rejected cookie is set", () => {
+  test("GTM does not load and banner hides if analytics_consent=rejected cookie is set", () => {
     const cookies = "analytics_consent=rejected";
-    const manager = createConsentManager(GA_ID, () => cookies, () => {});
+    const manager = createConsentManager(() => cookies, () => {});
     manager.init();
-    expect(manager.state.gaLoaded).toBe(false);
-    expect(window["ga-disable-" + GA_ID]).toBe(true);
+    expect(manager.state.gtmLoaded).toBe(false);
     expect(document.getElementById("cookie-banner").hidden).toBe(true);
   });
 });
 
 describe("Accept button", () => {
-  test("clicking accept loads GA and shows accepted message", () => {
+  test("clicking accept loads GTM and shows accepted message", () => {
     let savedCookie = "";
     const manager = createConsentManager(
-      GA_ID,
       () => savedCookie,
       (val) => { savedCookie = val; }
     );
@@ -158,32 +138,24 @@ describe("Accept button", () => {
 
     document.querySelector("[data-accept-cookies]").click();
 
-    expect(manager.state.gaLoaded).toBe(true);
-    expect(window["ga-disable-" + GA_ID]).toBe(false);
+    expect(manager.state.gtmLoaded).toBe(true);
     expect(savedCookie).toMatch(/analytics_consent=accepted/);
     expect(document.getElementById("cookie-banner-message").hidden).toBe(true);
     expect(document.getElementById("cookie-banner-accepted").hidden).toBe(false);
   });
 
-  test("GA loadGA() is idempotent — called twice only loads once", () => {
-    let savedCookie = "";
-    const manager = createConsentManager(
-      GA_ID,
-      () => savedCookie,
-      (val) => { savedCookie = val; }
-    );
-    manager.loadGA();
-    manager.loadGA();
-    expect(manager.state.gaLoaded).toBe(true);
-    expect(window["ga-disable-" + GA_ID]).toBe(false);
+  test("loadGTM() is idempotent — called twice only loads once", () => {
+    const manager = createConsentManager(() => "", () => {});
+    manager.loadGTM();
+    manager.loadGTM();
+    expect(manager.state.gtmLoaded).toBe(true);
   });
 });
 
 describe("Reject button", () => {
-  test("clicking reject disables GA and shows rejected message", () => {
+  test("clicking reject does not load GTM and shows rejected message", () => {
     let savedCookie = "";
     const manager = createConsentManager(
-      GA_ID,
       () => savedCookie,
       (val) => { savedCookie = val; }
     );
@@ -191,8 +163,7 @@ describe("Reject button", () => {
 
     document.querySelector("[data-reject-cookies]").click();
 
-    expect(manager.state.gaLoaded).toBe(false);
-    expect(window["ga-disable-" + GA_ID]).toBe(true);
+    expect(manager.state.gtmLoaded).toBe(false);
     expect(savedCookie).toMatch(/analytics_consent=rejected/);
     expect(document.getElementById("cookie-banner-message").hidden).toBe(true);
     expect(document.getElementById("cookie-banner-rejected").hidden).toBe(false);
@@ -203,7 +174,6 @@ describe("Hide banner button", () => {
   test("clicking hide removes the cookie banner", () => {
     let savedCookie = "";
     const manager = createConsentManager(
-      GA_ID,
       () => savedCookie,
       (val) => { savedCookie = val; }
     );
@@ -213,15 +183,5 @@ describe("Hide banner button", () => {
     document.querySelector("[data-hide-cookie-banner]").click();
 
     expect(document.getElementById("cookie-banner").hidden).toBe(true);
-  });
-});
-
-describe("disableGA()", () => {
-  test("disableGA sets the ga-disable window flag to true", () => {
-    const manager = createConsentManager(GA_ID, () => "", () => {});
-    manager.loadGA(); // enable first
-    expect(window["ga-disable-" + GA_ID]).toBe(false);
-    manager.disableGA();
-    expect(window["ga-disable-" + GA_ID]).toBe(true);
   });
 });
